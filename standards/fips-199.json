@@ -1,0 +1,11 @@
+{
+  "id": "FIPS-199",
+  "name": "Standards for Security Categorization of Federal Information and Information Systems",
+  "short_name": "FIPS 199",
+  "type": "standard",
+  "issuing_organization": "National Institute of Standards and Technology",
+  "publication_date": "2004-02-01",
+  "url": "https://csrc.nist.gov/pubs/fips/199/final",
+  "status": "active",
+  "notes": "Defines security categories (Low, Moderate, High) based on confidentiality, integrity, and availability impact levels."
+}

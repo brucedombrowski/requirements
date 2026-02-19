@@ -1,0 +1,46 @@
+{
+  "catalog_info": {
+    "id": "REQ-YYYY-NNN",
+    "title": "Custom Requirements — Your Domain",
+    "version": "1.0",
+    "date": "2026-01-01",
+    "status": "Draft"
+  },
+  "source_document": {
+    "id": "Your-Policy-ID",
+    "title": "Your Source Policy or Standard",
+    "issuing_authority": "Your Organization",
+    "status": "Active"
+  },
+  "standards": [
+    {
+      "id": "STANDARD-ID",
+      "name": "Referenced Standard Name",
+      "url": "https://example.com/standard"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "REQ-1.1",
+      "category": "Category Name",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "The system SHALL ...",
+      "standard": "STANDARD-ID",
+      "trace": "Section reference in source document",
+      "verification": "Test"
+    }
+  ],
+  "summary": {
+    "total": 1,
+    "mandatory": 1,
+    "recommended": 0,
+    "optional": 0,
+    "categories": ["Category Name"],
+    "applicability_breakdown": {
+      "technical": 1,
+      "organizational": 0,
+      "informational": 0
+    }
+  }
+}

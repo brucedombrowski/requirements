@@ -1,0 +1,77 @@
+{
+  "standard": "NIST SP 800-53 Rev 5",
+  "title": "Security and Privacy Controls for Information Systems and Organizations",
+  "url": "https://csrc.nist.gov/publications/detail/sp/800-53/rev-5/final",
+  "controls": {
+    "AU-2": {
+      "family": "Audit and Accountability",
+      "title": "Event Logging",
+      "description": "Identify the types of events that the system is capable of logging in support of the audit function."
+    },
+    "AU-3": {
+      "family": "Audit and Accountability",
+      "title": "Content of Audit Records",
+      "description": "Ensure that audit records contain information that establishes what type of event occurred, when it occurred, where it occurred, the source, outcome, and identity."
+    },
+    "CA-2": {
+      "family": "Assessment, Authorization, and Monitoring",
+      "title": "Control Assessments",
+      "description": "Assess the controls in the system to determine the extent to which the controls are implemented correctly and producing the desired outcome."
+    },
+    "CM-6": {
+      "family": "Configuration Management",
+      "title": "Configuration Settings",
+      "description": "Establish and document configuration settings for components employed within the system."
+    },
+    "CM-8": {
+      "family": "Configuration Management",
+      "title": "System Component Inventory",
+      "description": "Develop and document an inventory of system components that accurately reflects the system."
+    },
+    "MP-6": {
+      "family": "Media Protection",
+      "title": "Media Sanitization",
+      "description": "Sanitize system media prior to disposal, release, or reuse."
+    },
+    "RA-5": {
+      "family": "Risk Assessment",
+      "title": "Vulnerability Monitoring and Scanning",
+      "description": "Monitor and scan for vulnerabilities in the system and hosted applications."
+    },
+    "SA-11": {
+      "family": "System and Services Acquisition",
+      "title": "Developer Testing and Evaluation",
+      "description": "Require the developer of the system to create and implement a plan for ongoing security testing."
+    },
+    "SC-8": {
+      "family": "System and Communications Protection",
+      "title": "Transmission Confidentiality and Integrity",
+      "description": "Protect the confidentiality and integrity of transmitted information."
+    },
+    "SI-2": {
+      "family": "System and Information Integrity",
+      "title": "Flaw Remediation",
+      "description": "Identify, report, and correct system flaws."
+    },
+    "SI-3": {
+      "family": "System and Information Integrity",
+      "title": "Malicious Code Protection",
+      "description": "Implement malicious code protection mechanisms at system entry and exit points."
+    },
+    "SI-4": {
+      "family": "System and Information Integrity",
+      "title": "System Monitoring",
+      "description": "Monitor the system to detect attacks, indicators of potential attacks, and unauthorized connections."
+    },
+    "SI-5": {
+      "family": "System and Information Integrity",
+      "title": "Security Alerts, Advisories, and Directives",
+      "description": "Receive system security alerts and advisories from external organizations on an ongoing basis."
+    },
+    "SI-12": {
+      "family": "System and Information Integrity",
+      "title": "Information Management and Retention",
+      "description": "Manage and retain information within the system and information output from the system."
+    }
+  }
+}

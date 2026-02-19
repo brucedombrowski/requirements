@@ -1,0 +1,12 @@
+{
+  "id": "NIST-SP-800-53",
+  "name": "Security and Privacy Controls for Information Systems and Organizations",
+  "short_name": "NIST SP 800-53 Rev 5",
+  "type": "standard",
+  "issuing_organization": "National Institute of Standards and Technology",
+  "revision": "Rev 5 Update 1",
+  "publication_date": "2020-09-23",
+  "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
+  "status": "active",
+  "notes": "The comprehensive catalog of security and privacy controls for federal information systems."
+}

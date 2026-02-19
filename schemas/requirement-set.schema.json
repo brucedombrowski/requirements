@@ -1,0 +1,217 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/brucedombrowski/requirements/schemas/requirement-set.schema.json",
+  "title": "Requirement Set",
+  "description": "Schema for a catalog of requirements decomposed from an open standard or policy document.",
+  "type": "object",
+  "required": ["catalog_info", "source_document", "standards", "requirements", "summary"],
+  "properties": {
+    "catalog_info": {
+      "type": "object",
+      "description": "Metadata about this requirement set in the catalog.",
+      "required": ["id", "title", "version", "date", "status"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for this requirement set (e.g., REQ-2026-003)."
+        },
+        "title": {
+          "type": "string",
+          "description": "Human-readable title."
+        },
+        "version": {
+          "type": "string",
+          "description": "Version of this requirement set."
+        },
+        "date": {
+          "type": "string",
+          "format": "date",
+          "description": "Date this requirement set was created or last updated."
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Draft", "Approved", "Superseded", "Retired"],
+          "description": "Lifecycle status of this requirement set."
+        }
+      },
+      "additionalProperties": false
+    },
+    "source_document": {
+      "type": "object",
+      "description": "The source policy, regulation, or standard from which requirements were derived.",
+      "required": ["id", "title", "issuing_authority", "status"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Official identifier (e.g., NPR 2810.7)."
+        },
+        "title": {
+          "type": "string"
+        },
+        "issuing_authority": {
+          "type": "string"
+        },
+        "effective_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "expiration_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["Active", "Expired", "Draft", "Superseded"]
+        },
+        "predecessor": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string" },
+            "title": { "type": "string" },
+            "status": { "type": "string" },
+            "expiration_date": { "type": "string", "format": "date" },
+            "url": { "type": "string", "format": "uri" }
+          }
+        },
+        "successor": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string" },
+            "title": { "type": "string" },
+            "effective_date": { "type": "string", "format": "date" },
+            "expiration_date": { "type": "string", "format": "date" },
+            "url": { "type": "string", "format": "uri" }
+          }
+        },
+        "parent_policy": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "string" },
+            "title": { "type": "string" },
+            "url": { "type": "string", "format": "uri" }
+          }
+        },
+        "federal_authority": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "note": {
+          "type": "string"
+        },
+        "responsible_office": {
+          "type": "string"
+        },
+        "nasa_cui_reference": {
+          "type": "string",
+          "format": "uri"
+        }
+      },
+      "additionalProperties": false
+    },
+    "standards": {
+      "type": "array",
+      "description": "Standards referenced by requirements in this set. Each entry references a standard defined in standards/.",
+      "items": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Standard identifier matching a file in standards/ (e.g., nist-sp-800-53-r5)."
+          },
+          "name": {
+            "type": "string",
+            "description": "Short name for inline display."
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Canonical URL."
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "requirements": {
+      "type": "array",
+      "description": "Ordered array of requirements preserving source document structure.",
+      "items": {
+        "type": "object",
+        "required": ["id", "category", "priority", "applicability", "description", "standard", "trace", "verification"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Requirement identifier (e.g., REQ-2.13.1)."
+          },
+          "category": {
+            "type": "string",
+            "description": "Functional category grouping."
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["Mandatory", "Recommended", "Optional"],
+            "description": "Requirement priority level."
+          },
+          "applicability": {
+            "type": "string",
+            "enum": ["technical", "organizational", "informational"],
+            "description": "Applicability domain."
+          },
+          "description": {
+            "type": "string",
+            "description": "Full requirement text."
+          },
+          "standard": {
+            "type": "string",
+            "description": "ID of the governing standard from the standards array."
+          },
+          "trace": {
+            "type": "string",
+            "description": "Traceability reference to the source document section."
+          },
+          "verification": {
+            "type": "string",
+            "enum": ["Analysis", "Inspection", "Test", "Demonstration"],
+            "description": "Verification method."
+          },
+          "controls": {
+            "type": "array",
+            "description": "Optional cross-reference to NIST control IDs.",
+            "items": { "type": "string" }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "summary": {
+      "type": "object",
+      "description": "Aggregate statistics for the requirement set.",
+      "required": ["total"],
+      "properties": {
+        "total": { "type": "integer", "minimum": 0 },
+        "mandatory": { "type": "integer", "minimum": 0 },
+        "recommended": { "type": "integer", "minimum": 0 },
+        "optional": { "type": "integer", "minimum": 0 },
+        "categories": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "applicability_breakdown": {
+          "type": "object",
+          "properties": {
+            "technical": { "type": "integer", "minimum": 0 },
+            "organizational": { "type": "integer", "minimum": 0 },
+            "informational": { "type": "integer", "minimum": 0 }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

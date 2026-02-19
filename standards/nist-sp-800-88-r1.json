@@ -1,0 +1,12 @@
+{
+  "id": "NIST-SP-800-88",
+  "name": "Guidelines for Media Sanitization",
+  "short_name": "NIST SP 800-88 Rev 1",
+  "type": "standard",
+  "issuing_organization": "National Institute of Standards and Technology",
+  "revision": "Rev 1",
+  "publication_date": "2014-12-18",
+  "url": "https://csrc.nist.gov/pubs/sp/800/88/r1/final",
+  "status": "active",
+  "notes": "Provides guidance on media sanitization methods (Clear, Purge, Destroy) for different media types."
+}

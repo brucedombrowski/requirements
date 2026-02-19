@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/brucedombrowski/requirements/schemas/control.schema.json",
+  "title": "Control Catalog",
+  "description": "Schema for NIST/FIPS control definitions. Definition-only — no implementation blocks (those belong in consuming projects).",
+  "type": "object",
+  "required": ["standard", "title", "url", "controls"],
+  "properties": {
+    "standard": {
+      "type": "string",
+      "description": "Standard identifier and revision (e.g., NIST SP 800-53 Rev 5)."
+    },
+    "title": {
+      "type": "string",
+      "description": "Full title of the standard."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical publication URL."
+    },
+    "controls": {
+      "type": "object",
+      "description": "Control definitions keyed by control ID.",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["family", "title", "description"],
+        "properties": {
+          "family": {
+            "type": "string",
+            "description": "Control family name."
+          },
+          "title": {
+            "type": "string",
+            "description": "Control title."
+          },
+          "description": {
+            "type": "string",
+            "description": "Control description."
+          },
+          "derived_from": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Parent control IDs (for 800-171 → 800-53 mapping)."
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

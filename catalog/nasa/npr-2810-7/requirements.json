@@ -1,0 +1,824 @@
+{
+  "catalog_info": {
+    "id": "REQ-2026-003",
+    "title": "CUI Requirements — NPR 2810.7 (Active)",
+    "version": "1.0",
+    "date": "2026-02-17",
+    "status": "Approved"
+  },
+  "source_document": {
+    "id": "NPR 2810.7",
+    "title": "Controlled Unclassified Information (Change 1)",
+    "issuing_authority": "NASA",
+    "effective_date": "2021-10-22",
+    "expiration_date": "2026-10-22",
+    "status": "Active",
+    "predecessor": {
+      "id": "NID 2810.135",
+      "title": "Controlled Unclassified Information",
+      "status": "Expired",
+      "expiration_date": "2022-02-02",
+      "url": "https://nodis3.gsfc.nasa.gov/OPD_docs/NID_2810_135_.pdf"
+    },
+    "parent_policy": {
+      "id": "NPD 2810.1F",
+      "title": "NASA Information Security Policy",
+      "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?t=NPD&c=2810&s=1E"
+    },
+    "federal_authority": [
+      "Executive Order 13556",
+      "32 CFR Part 2002"
+    ],
+    "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?t=NPR&c=2810&s=7",
+    "note": "CURRENT ACTIVE — This is the governing NASA procedural requirement for CUI management. Superseded NID 2810.135. Expires Oct 22, 2026.",
+    "responsible_office": "Office of the Chief Information Officer",
+    "nasa_cui_reference": "https://www.nasa.gov/controlled-unclassified-information-cui-and-why-it-matters/"
+  },
+  "standards": [
+    {"id": "EO-13556", "name": "Establishing the Controlled Unclassified Information Program", "url": "https://www.archives.gov/cui/registry/policy-guidance"},
+    {"id": "32-CFR-2002", "name": "Controlled Unclassified Information Program", "url": "https://www.ecfr.gov/current/title-32/subtitle-B/chapter-XX/part-2002"},
+    {"id": "NIST-SP-800-171", "name": "Protecting CUI in Nonfederal Systems and Organizations", "url": "https://csrc.nist.gov/pubs/sp/800/171/r3/final"},
+    {"id": "NIST-SP-800-53", "name": "Security and Privacy Controls for Information Systems", "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final"},
+    {"id": "FIPS-199", "name": "Standards for Security Categorization of Federal Information", "url": "https://csrc.nist.gov/pubs/fips/199/final"},
+    {"id": "FIPS-140-2", "name": "Security Requirements for Cryptographic Modules", "url": "https://csrc.nist.gov/pubs/fips/140-2/final"},
+    {"id": "NIST-SP-800-88", "name": "Guidelines for Media Sanitization", "url": "https://csrc.nist.gov/pubs/sp/800/88/r1/final"},
+    {"id": "NARA-CUI-Registry", "name": "National Archives CUI Registry", "url": "https://www.archives.gov/cui"}
+  ],
+  "requirements": [
+    {
+      "id": "REQ-1.1",
+      "category": "Roles and Responsibilities",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "The NASA Administrator SHALL establish and maintain an agency-wide CUI program consistent with EO 13556 and 32 CFR Part 2002.",
+      "standard": "EO-13556",
+      "trace": "§1.2 Responsibilities — Administrator",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-1.2",
+      "category": "Roles and Responsibilities",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "The NASA Chief Information Officer/Senior Agency Official (CIO/SAO) SHALL oversee implementation of the CUI program across the agency.",
+      "standard": "32-CFR-2002",
+      "trace": "§1.2 Responsibilities — CIO/SAO",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-1.3",
+      "category": "Roles and Responsibilities",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "The CUI Program Manager SHALL manage day-to-day CUI program operations and serve as the primary point of contact for CUI matters.",
+      "standard": "32-CFR-2002",
+      "trace": "§1.2 Responsibilities — CUI PM",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-1.4",
+      "category": "Roles and Responsibilities",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Center Directors SHALL ensure CUI program compliance at their respective Centers.",
+      "standard": "32-CFR-2002",
+      "trace": "§1.2 Responsibilities — Center Directors",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-1.5",
+      "category": "Roles and Responsibilities",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Center Chief Information Officers SHALL implement IT controls for CUI within Center information systems.",
+      "standard": "NIST-SP-800-53",
+      "trace": "§1.2 Responsibilities — Center CIOs",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-1.6",
+      "category": "Roles and Responsibilities",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Contracting Officers SHALL include CUI handling requirements in contracts and agreements involving CUI.",
+      "standard": "32-CFR-2002",
+      "trace": "§1.2 Responsibilities — Contracting Officers",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-1.7",
+      "category": "Roles and Responsibilities",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Contracting Officer Representatives (CORs) SHALL monitor contractor compliance with CUI handling requirements.",
+      "standard": "32-CFR-2002",
+      "trace": "§1.2 Responsibilities — CORs",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-1.8",
+      "category": "Roles and Responsibilities",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Supervisors SHALL ensure all personnel under their authority are aware of CUI requirements and complete required training.",
+      "standard": "32-CFR-2002",
+      "trace": "§1.2 Responsibilities — Supervisors",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-1.9",
+      "category": "Roles and Responsibilities",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "All NASA personnel and contractors SHALL safeguard CUI in their possession and report suspected unauthorized disclosures.",
+      "standard": "32-CFR-2002",
+      "trace": "§1.2 Responsibilities — All Personnel",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-1.10",
+      "category": "Roles and Responsibilities",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Non-executive branch entities receiving CUI SHALL handle it in accordance with the provisions of applicable agreements (MOUs, contracts, grants).",
+      "standard": "32-CFR-2002",
+      "trace": "§1.2 Responsibilities — Non-Executive Branch",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.1.1",
+      "category": "General CUI Management",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "CUI categories and subcategories SHALL be drawn from the NARA CUI Registry.",
+      "standard": "NARA-CUI-Registry",
+      "trace": "§2.1 General",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.1.2",
+      "category": "General CUI Management",
+      "priority": "Mandatory",
+      "applicability": "informational",
+      "description": "Authorized holders of CUI SHALL be responsible for knowing what CUI they possess, how to protect it, and whom to contact regarding questions about CUI.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.1 General",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.1.3",
+      "category": "General CUI Management",
+      "priority": "Mandatory",
+      "applicability": "informational",
+      "description": "CUI Basic SHALL be handled according to the uniform set of controls in 32 CFR Part 2002. CUI Specified SHALL be handled according to the controls required by the authorizing law, regulation, or government-wide policy.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.1 General — CUI Basic vs CUI Specified",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.2.1",
+      "category": "Marking",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "All CUI documents SHALL include a CUI banner marking at the top of each page.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.2 Marking of CUI",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.2.2",
+      "category": "Marking",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "The CUI banner marking SHALL include the CUI designation indicator (e.g., CUI or CONTROLLED).",
+      "standard": "32-CFR-2002",
+      "trace": "§2.2 Marking — Designation Indicator",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.2.3",
+      "category": "Marking",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "CUI Specified documents SHALL include the specific CUI category or subcategory marking (e.g., CUI//SP-CTI, CUI//SP-EXPT).",
+      "standard": "32-CFR-2002",
+      "trace": "§2.2 Marking — Category/Subcategory",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.2.4",
+      "category": "Marking",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "CUI markings SHALL include the name or abbreviation of the designating agency or organization.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.2 Marking — Agency Indicator",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.2.5",
+      "category": "Marking",
+      "priority": "Recommended",
+      "applicability": "technical",
+      "description": "CUI markings SHOULD include limited dissemination control markings where applicable (e.g., NOFORN, FEDCON, NOCON).",
+      "standard": "32-CFR-2002",
+      "trace": "§2.2 Marking — Dissemination Controls",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.2.6",
+      "category": "Marking",
+      "priority": "Recommended",
+      "applicability": "technical",
+      "description": "CUI banner markings SHOULD include a point of contact for questions about the CUI designation.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.2 Marking — Point of Contact",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.3.1",
+      "category": "Portion Marking",
+      "priority": "Optional",
+      "applicability": "technical",
+      "description": "Portion marking of CUI documents MAY be used at NASA but is not required unless mandated by a CUI Specified authority.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.3 Portion Marking (Optional)",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.3.2",
+      "category": "Portion Marking",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "If portion marking is used, each portion containing CUI SHALL be marked with the applicable CUI designation.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.3 Portion Marking",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.4.1",
+      "category": "Commingling",
+      "priority": "Mandatory",
+      "applicability": "informational",
+      "description": "When CUI is commingled with classified information, the most restrictive handling requirements SHALL apply to the entire document.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.4 Comingling CUI with CNSI",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.4.2",
+      "category": "Commingling",
+      "priority": "Recommended",
+      "applicability": "informational",
+      "description": "CUI SHOULD be separated from classified national security information where feasible to facilitate appropriate handling.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.4 Comingling",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.5.1",
+      "category": "Legacy Materials",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Legacy markings (e.g., FOUO, SBU, LES) on existing documents SHALL be honored and protected at the CUI level until the documents are re-marked or decontrolled.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.5 Legacy Materials",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.5.2",
+      "category": "Legacy Materials",
+      "priority": "Recommended",
+      "applicability": "organizational",
+      "description": "Legacy-marked documents SHOULD be re-marked with CUI markings when revised or reprinted.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.5 Legacy Materials — Re-marking",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.6.1",
+      "category": "Working Papers",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Working papers containing CUI SHALL be marked and safeguarded in the same manner as final CUI documents.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.6 Working Papers",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.7.1",
+      "category": "Supplemental Markings",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "Supplemental administrative markings (e.g., NOFORN, FEDCON, NOCON) SHALL be applied in accordance with the CUI Registry and dissemination control requirements.",
+      "standard": "NARA-CUI-Registry",
+      "trace": "§2.7 Supplemental Markings",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.7.2",
+      "category": "Supplemental Markings",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "Limited dissemination controls SHALL be indicated after the CUI marking, separated by a double slash (e.g., CUI//NOFORN).",
+      "standard": "32-CFR-2002",
+      "trace": "§2.7 Supplemental Markings — Format",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.8.1",
+      "category": "Unmarked CUI",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Personnel who receive information they believe to be CUI but is not marked SHALL notify the designating agency or authorized holder.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.8 Unmarked CUI",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.8.2",
+      "category": "Unmarked CUI",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Suspected CUI that is not marked SHALL be treated as CUI and safeguarded accordingly until the designating agency confirms or denies the CUI status.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.8 Unmarked CUI",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.9.1",
+      "category": "Sharing and Dissemination",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "CUI SHALL only be shared with authorized recipients who have a lawful government purpose and a need to know.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.9 Sharing — Need to Know",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.9.2",
+      "category": "Sharing and Dissemination",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Sharing CUI with non-executive branch entities SHALL be governed by written agreements (MOUs, contracts, grants) that specify handling requirements.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.9 Sharing — Non-Executive Branch",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.9.3",
+      "category": "Sharing and Dissemination",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "Electronic transmission of CUI SHALL use encryption meeting the requirements of Section 2.13 (Safeguarding).",
+      "standard": "NIST-SP-800-171",
+      "trace": "§2.9 Sharing — Electronic Transmission",
+      "verification": "Test"
+    },
+    {
+      "id": "REQ-2.9.4",
+      "category": "Sharing and Dissemination",
+      "priority": "Recommended",
+      "applicability": "technical",
+      "description": "When sharing CUI electronically, the transmitting system SHOULD include a notice informing the recipient that the information is CUI and subject to safeguarding requirements.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.9 Sharing — Recipient Notice",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.10.1",
+      "category": "Disclosure",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "CUI disclosure requirements under FOIA, Privacy Act, and other statutes SHALL be followed. CUI status does not override legal requirements to disclose information.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.10 CUI Disclosure Statutes",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.11.1",
+      "category": "Challenges",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "NASA personnel SHALL be permitted to challenge the designation of information as CUI through established processes without fear of retribution.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.11 Challenges to Designation",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.11.2",
+      "category": "Challenges",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Challenges to CUI designation SHALL be resolved by the designating authority or the CUI PM within a reasonable timeframe.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.11 Challenges — Resolution",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.12.1",
+      "category": "Decontrol",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Only authorized holders or the designating agency SHALL decontrol CUI. Decontrol removes safeguarding and dissemination requirements.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.12 Decontrol of CUI",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.12.2",
+      "category": "Decontrol",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "When CUI is decontrolled, all CUI markings SHALL be removed or clearly struck through, and recipients SHALL be notified of the change in status.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.12 Decontrol — Marking Removal",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.13.1",
+      "category": "Safeguarding",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "CUI SHALL be protected from unauthorized access, use, or disclosure through physical, technical, and administrative safeguards.",
+      "standard": "NIST-SP-800-171",
+      "trace": "§2.13 Safeguarding and Storage — General",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.13.2",
+      "category": "Safeguarding",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "Electronic CUI at rest SHALL be encrypted using FIPS 140-2 validated cryptographic modules.",
+      "standard": "FIPS-140-2",
+      "trace": "§2.13 Safeguarding — Encryption at Rest",
+      "verification": "Test"
+    },
+    {
+      "id": "REQ-2.13.3",
+      "category": "Safeguarding",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "Electronic CUI in transit SHALL be encrypted using FIPS 140-2 validated cryptographic modules.",
+      "standard": "FIPS-140-2",
+      "trace": "§2.13 Safeguarding — Encryption in Transit",
+      "verification": "Test"
+    },
+    {
+      "id": "REQ-2.13.4",
+      "category": "Safeguarding",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "Access to CUI SHALL be limited to authorized individuals through access control mechanisms (authentication and authorization).",
+      "standard": "NIST-SP-800-171",
+      "trace": "§2.13 Safeguarding — Access Control",
+      "verification": "Test"
+    },
+    {
+      "id": "REQ-2.13.5",
+      "category": "Safeguarding",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Physical CUI documents SHALL be stored in locked containers or areas with access restricted to authorized personnel when not under direct control of an authorized holder.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.13 Safeguarding — Physical Storage",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.13.6",
+      "category": "Safeguarding",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "Systems processing CUI SHALL implement the security requirements of NIST SP 800-171 (for nonfederal systems) or NIST SP 800-53 (for federal systems).",
+      "standard": "NIST-SP-800-171",
+      "trace": "§2.13 Safeguarding — NIST Controls",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.13.7",
+      "category": "Safeguarding",
+      "priority": "Recommended",
+      "applicability": "technical",
+      "description": "CUI data SHOULD be protected from accidental exposure through anonymization or redaction before sharing outside the authorized handling environment.",
+      "standard": "NIST-SP-800-171",
+      "trace": "§2.13 Safeguarding — Data Minimization",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.13.8",
+      "category": "Safeguarding",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "Backups of CUI data SHALL be protected with the same level of safeguarding as the original data.",
+      "standard": "NIST-SP-800-171",
+      "trace": "§2.13 Safeguarding — Backup Protection",
+      "verification": "Test"
+    },
+    {
+      "id": "REQ-2.14.1",
+      "category": "Reproduction",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "All CUI markings SHALL be maintained on reproductions (copies) of CUI documents.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.14 Reproduction of CUI",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.14.2",
+      "category": "Reproduction",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Reproductions of CUI SHALL be subject to the same safeguarding requirements as the original document.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.14 Reproduction — Same Protections",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.15.1",
+      "category": "Transmission",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "CUI transmitted electronically SHALL be encrypted using approved methods meeting FIPS 140-2 requirements.",
+      "standard": "FIPS-140-2",
+      "trace": "§2.15 Shipping or Mailing CUI — Electronic",
+      "verification": "Test"
+    },
+    {
+      "id": "REQ-2.15.2",
+      "category": "Transmission",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "CUI shipped via physical mail SHALL be double-wrapped, with the inner wrapper marked with CUI markings and the outer wrapper unmarked.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.15 Shipping or Mailing CUI — Physical",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.15.3",
+      "category": "Transmission",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "CUI SHALL only be transmitted using approved channels (e.g., encrypted email, secure file transfer, registered mail).",
+      "standard": "32-CFR-2002",
+      "trace": "§2.15 Transmission — Approved Channels",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.16.1",
+      "category": "Transmission",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "Transmittal documents for CUI SHALL include appropriate CUI markings to indicate the presence of CUI in the attached material.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.16 Transmittal Document Marking Requirements",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.17.1",
+      "category": "Destruction",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Paper CUI documents SHALL be destroyed by cross-cut shredding, pulping, or burning to render the information unreadable and irrecoverable.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.17 Destruction of CUI — Paper",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.17.2",
+      "category": "Destruction",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "Electronic media containing CUI SHALL be sanitized in accordance with NIST SP 800-88 before disposal or reuse.",
+      "standard": "NIST-SP-800-88",
+      "trace": "§2.17 Destruction — Electronic Media",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.17.3",
+      "category": "Destruction",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "CUI data SHALL NOT be placed in standard recycling bins, uncontrolled trash receptacles, or unsecured deletion processes.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.17 Destruction — Prohibited Methods",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.18.1",
+      "category": "Incident Reporting",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Unauthorized disclosure, loss, or compromise of CUI SHALL be reported to the NASA Security Operations Center (SOC) and the CUI PM.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.18 Misuse of CUI and Incident Reporting",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.18.2",
+      "category": "Incident Reporting",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "CUI incidents SHALL be reported within one hour of discovery to enable timely investigation and mitigation.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.18 Incident Reporting — Timeline",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.18.3",
+      "category": "Incident Reporting",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Investigation of CUI incidents SHALL include assessment of potential harm and identification of remedial actions.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.18 Incident Reporting — Investigation",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.19.1",
+      "category": "Incident Reporting",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Sanctions for intentional misuse of CUI SHALL be applied in accordance with NASA policy and applicable laws.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.19 Sanctions for Misuse of CUI",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.20.1",
+      "category": "IT Systems",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "Information systems processing, storing, or transmitting CUI SHALL be categorized at a minimum of FIPS 199 Moderate confidentiality impact level.",
+      "standard": "FIPS-199",
+      "trace": "§2.20 CUI Within Information Systems — Categorization",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.20.2",
+      "category": "IT Systems",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "Federal information systems processing CUI SHALL implement security controls from NIST SP 800-53 at the Moderate baseline.",
+      "standard": "NIST-SP-800-53",
+      "trace": "§2.20 IT Systems — Federal Controls",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.20.3",
+      "category": "IT Systems",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "Nonfederal information systems processing CUI SHALL implement security requirements from NIST SP 800-171.",
+      "standard": "NIST-SP-800-171",
+      "trace": "§2.20 IT Systems — Nonfederal Controls",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.20.4",
+      "category": "IT Systems",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "Cloud services used for CUI SHALL be FedRAMP authorized at the Moderate baseline or equivalent.",
+      "standard": "NIST-SP-800-53",
+      "trace": "§2.20 IT Systems — Cloud Services",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.20.5",
+      "category": "IT Systems",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "IT systems processing CUI SHALL implement access controls that enforce least privilege and need-to-know principles.",
+      "standard": "NIST-SP-800-171",
+      "trace": "§2.20 IT Systems — Access Control",
+      "verification": "Test"
+    },
+    {
+      "id": "REQ-2.20.6",
+      "category": "IT Systems",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "IT systems processing CUI SHALL maintain audit logs of access to CUI data sufficient to support investigation of unauthorized access or disclosure.",
+      "standard": "NIST-SP-800-53",
+      "trace": "§2.20 IT Systems — Audit Logging",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.20.7",
+      "category": "IT Systems",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "IT systems SHALL implement multi-factor authentication for access to CUI when technically feasible.",
+      "standard": "NIST-SP-800-171",
+      "trace": "§2.20 IT Systems — Authentication",
+      "verification": "Test"
+    },
+    {
+      "id": "REQ-2.20.8",
+      "category": "IT Systems",
+      "priority": "Mandatory",
+      "applicability": "technical",
+      "description": "CUI data SHALL NOT be stored in version control repositories or other publicly accessible systems without encryption and access controls.",
+      "standard": "NIST-SP-800-171",
+      "trace": "§2.20 IT Systems — Repository Controls",
+      "verification": "Inspection"
+    },
+    {
+      "id": "REQ-2.21.1",
+      "category": "Self-Inspection",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Each NASA Center SHALL conduct annual self-inspections of its CUI program to identify deficiencies and corrective actions.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.21 CUI Self-Inspection Program",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.21.2",
+      "category": "Self-Inspection",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Self-inspection results SHALL be reported to the CUI PM and used to improve program effectiveness.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.21 Self-Inspection — Reporting",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.22.1",
+      "category": "Waivers",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Waivers to CUI requirements SHALL be processed through the NASA CIO and documented with justification and risk acceptance.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.22 Waivers to CUI Requirements",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.23.1",
+      "category": "Training",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "All NASA personnel and contractors with access to CUI SHALL complete initial CUI awareness training before being granted access to CUI.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.23 CUI Education and Training — Initial",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.23.2",
+      "category": "Training",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "Annual CUI refresher training SHALL be completed by all personnel with access to CUI.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.23 Training — Annual Refresher",
+      "verification": "Analysis"
+    },
+    {
+      "id": "REQ-2.23.3",
+      "category": "Training",
+      "priority": "Mandatory",
+      "applicability": "organizational",
+      "description": "CUI training records SHALL be maintained and available for audit by the CUI PM and self-inspection program.",
+      "standard": "32-CFR-2002",
+      "trace": "§2.23 Training — Record Keeping",
+      "verification": "Analysis"
+    }
+  ],
+  "summary": {
+    "total": 72,
+    "mandatory": 66,
+    "recommended": 5,
+    "optional": 1,
+    "categories": [
+      "Roles and Responsibilities",
+      "General CUI Management",
+      "Marking",
+      "Portion Marking",
+      "Commingling",
+      "Legacy Materials",
+      "Working Papers",
+      "Supplemental Markings",
+      "Unmarked CUI",
+      "Sharing and Dissemination",
+      "Disclosure",
+      "Challenges",
+      "Decontrol",
+      "Safeguarding",
+      "Reproduction",
+      "Transmission",
+      "Destruction",
+      "Incident Reporting",
+      "IT Systems",
+      "Self-Inspection",
+      "Waivers",
+      "Training"
+    ],
+    "applicability_breakdown": {
+      "technical": 32,
+      "organizational": 34,
+      "informational": 6
+    }
+  }
+}

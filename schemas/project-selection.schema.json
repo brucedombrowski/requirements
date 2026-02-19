@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/brucedombrowski/requirements/schemas/project-selection.schema.json",
+  "title": "Project Selection",
+  "description": "Schema for consuming projects to declare which requirements they adopt from the catalog.",
+  "type": "object",
+  "required": ["project", "selections"],
+  "properties": {
+    "project": {
+      "type": "object",
+      "required": ["name", "version"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Name of the consuming project."
+        },
+        "version": {
+          "type": "string",
+          "description": "Version of the project."
+        },
+        "description": {
+          "type": "string",
+          "description": "Brief description of the project."
+        }
+      },
+      "additionalProperties": false
+    },
+    "selections": {
+      "type": "array",
+      "description": "Which requirement sets or control catalogs to adopt.",
+      "items": {
+        "type": "object",
+        "required": ["source", "include"],
+        "properties": {
+          "source": {
+            "type": "string",
+            "description": "Path to the requirement set relative to catalog root (e.g., nasa/npr-2810-7)."
+          },
+          "include": {
+            "type": "string",
+            "enum": ["all", "mandatory-only", "selected"],
+            "description": "Inclusion strategy."
+          },
+          "requirement_ids": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Specific requirement IDs when include is 'selected'."
+          },
+          "exclude_ids": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Requirement IDs to exclude when include is 'all' or 'mandatory-only'."
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "custom_requirements": {
+      "type": "array",
+      "description": "Project-specific requirements not from the catalog.",
+      "items": {
+        "type": "object",
+        "required": ["id", "category", "priority", "description", "verification"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Project-specific requirement ID."
+          },
+          "category": {
+            "type": "string"
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["Mandatory", "Recommended", "Optional"]
+          },
+          "description": {
+            "type": "string"
+          },
+          "verification": {
+            "type": "string",
+            "enum": ["Analysis", "Inspection", "Test", "Demonstration"]
+          },
+          "rationale": {
+            "type": "string",
+            "description": "Why this custom requirement exists."
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

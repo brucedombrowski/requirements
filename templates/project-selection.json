@@ -1,0 +1,28 @@
+{
+  "project": {
+    "name": "Your Project Name",
+    "version": "1.0.0",
+    "description": "Brief description of your project."
+  },
+  "selections": [
+    {
+      "source": "nasa/npr-2810-7",
+      "include": "mandatory-only"
+    },
+    {
+      "source": "nist/sp-800-53-r5",
+      "include": "selected",
+      "requirement_ids": ["AU-2", "CM-8"]
+    }
+  ],
+  "custom_requirements": [
+    {
+      "id": "PROJ-001",
+      "category": "Project-Specific",
+      "priority": "Mandatory",
+      "description": "Example custom requirement for your project.",
+      "verification": "Test",
+      "rationale": "Explain why this requirement is needed beyond the catalog."
+    }
+  ]
+}

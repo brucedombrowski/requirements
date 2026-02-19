@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/brucedombrowski/requirements/schemas/standard.schema.json",
+  "title": "Standard Definition",
+  "description": "Schema for standard/regulation metadata. Each standard is defined once and referenced by ID across the catalog.",
+  "type": "object",
+  "required": ["id", "name", "type", "issuing_organization", "url"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "Unique identifier used to reference this standard (e.g., NIST-SP-800-53)."
+    },
+    "name": {
+      "type": "string",
+      "description": "Full official title."
+    },
+    "short_name": {
+      "type": "string",
+      "description": "Abbreviated name for display."
+    },
+    "type": {
+      "type": "string",
+      "enum": ["standard", "regulation", "executive_order", "registry", "federal_regulation"],
+      "description": "Classification of the standard."
+    },
+    "issuing_organization": {
+      "type": "string",
+      "description": "Organization that published this standard."
+    },
+    "revision": {
+      "type": "string",
+      "description": "Revision or version identifier."
+    },
+    "publication_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of publication."
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Canonical URL."
+    },
+    "supersedes": {
+      "type": "string",
+      "description": "ID of the standard this one supersedes."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["active", "withdrawn", "superseded"],
+      "description": "Current status."
+    },
+    "notes": {
+      "type": "string",
+      "description": "Additional context."
+    }
+  },
+  "additionalProperties": false
+}

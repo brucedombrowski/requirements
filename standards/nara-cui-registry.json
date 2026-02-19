@@ -1,0 +1,10 @@
+{
+  "id": "NARA-CUI-Registry",
+  "name": "National Archives CUI Registry",
+  "short_name": "NARA CUI Registry",
+  "type": "registry",
+  "issuing_organization": "National Archives and Records Administration",
+  "url": "https://www.archives.gov/cui",
+  "status": "active",
+  "notes": "The authoritative registry of CUI categories, subcategories, and associated marking and handling requirements."
+}

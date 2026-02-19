@@ -1,0 +1,12 @@
+{
+  "id": "NIST-SP-800-171",
+  "name": "Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations",
+  "short_name": "NIST SP 800-171 Rev 2",
+  "type": "standard",
+  "issuing_organization": "National Institute of Standards and Technology",
+  "revision": "Rev 2",
+  "publication_date": "2020-02-21",
+  "url": "https://csrc.nist.gov/pubs/sp/800/171/r3/final",
+  "status": "active",
+  "notes": "Defines security requirements for protecting CUI in nonfederal systems. Rev 3 is available but Rev 2 remains widely referenced."
+}
