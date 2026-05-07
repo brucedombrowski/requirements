@@ -120,7 +120,7 @@ block recording the upstream artifact's path and SHA-256:
 
 - `controls/nist-800-53/catalog.json` ← `sources/nist/oscal/...`
 - `controls/nist-800-171/rev3/catalog.json` ← `sources/nist/oscal/...`
-- `catalog/federal/us-constitution/document.json` ← three NARA HTML
+- `catalog/federal/us-constitution/constitution.json` ← three NARA HTML
   files
 
 Re-running the corresponding tool against unchanged input produces

@@ -2,7 +2,7 @@
 """Deterministic extractor: NARA HTML transcripts -> structured JSON.
 
 Reads three NARA-published HTML transcripts from sources/federal/us-constitution-html/
-and emits a single catalog/federal/us-constitution/document.json with a
+and emits a single catalog/federal/us-constitution/constitution.json with a
 clean prose structure for LLM retrieval. The script is purely
 mechanical — same HTML input always produces the same JSON output —
 and records the source HTML SHA-256 digests in the output's `source`
@@ -25,7 +25,7 @@ from lxml import html as lh
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 SOURCE_DIR = REPO_ROOT / "sources" / "federal" / "us-constitution-html"
-OUT_PATH = REPO_ROOT / "catalog" / "federal" / "us-constitution" / "document.json"
+OUT_PATH = REPO_ROOT / "catalog" / "federal" / "us-constitution" / "constitution.json"
 
 ROMAN = {
     1: "I", 2: "II", 3: "III", 4: "IV", 5: "V", 6: "VI", 7: "VII", 8: "VIII",

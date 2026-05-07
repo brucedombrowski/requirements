@@ -5,7 +5,7 @@ extracted deterministically from NARA's published transcripts.
 
 ## Files
 
-- `document.json` — preamble + 7 articles (with sections) + 27 amendments
+- `constitution.json` — preamble + 7 articles (with sections) + 27 amendments
   (with sections where the amendment is split). Each section is a clean
   prose chunk suitable for LLM retrieval; each amendment carries its
   ratification date.
@@ -21,7 +21,7 @@ Generated from three NARA transcripts under
 | `bill-of-rights.html` | <https://www.archives.gov/founding-docs/bill-of-rights-transcript> |
 | `amendments-11-27.html` | <https://www.archives.gov/founding-docs/amendments-11-27> |
 
-The `source.extracted_from` block in `document.json` records each HTML
+The `source.extracted_from` block in `constitution.json` records each HTML
 file's path, URL, and SHA-256. NARA is the legal custodian of the
 Constitution (the original parchment is in their vault), so these
 transcripts are the closest thing to a "canonical" plain text.
@@ -37,7 +37,7 @@ python tools/validate.py
 ```
 
 Re-running produces byte-identical output for a given input. Diffs in
-`document.json` after regeneration imply the underlying NARA HTML
+`constitution.json` after regeneration imply the underlying NARA HTML
 changed — review before committing.
 
 ## Citation
