@@ -5,6 +5,7 @@ Validate JSON files against their corresponding schemas.
 Usage:
     python tools/validate.py              # Validate all JSON files
     python tools/validate.py --verbose    # Show per-file results
+    python tools/validate.py --graph      # Also validate authority graph
     python tools/validate.py FILE...      # Validate specific files
 """
 
@@ -34,6 +35,9 @@ SCHEMA_MAP = {
     ],
     "schemas/project-selection.schema.json": [
         "templates/project-selection.json",
+    ],
+    "schemas/cui-registry.schema.json": [
+        "registries/nara-cui/registry.json",
     ],
 }
 
@@ -85,8 +89,126 @@ def validate_file(filepath, schema_path, verbose=False):
         return True, []
 
 
+def load_standards():
+    """Load all standard JSON files and return as dict keyed by id."""
+    standards = {}
+    standards_dir = REPO_ROOT / "standards"
+    for path in sorted(standards_dir.glob("*.json")):
+        if path.name == "README.md":
+            continue
+        with open(path) as f:
+            data = json.load(f)
+        standards[data["id"]] = data
+    return standards
+
+
+def validate_graph(verbose=False):
+    """Validate authority graph relationships.
+
+    Checks:
+    1. Dangling references — all derives_from/references IDs must exist
+    2. Cycle detection — derives_from edges must form a DAG
+    3. Tier consistency — derives_from edges should point to equal-or-lower tier
+    4. Orphan warning — standards with no authority edges
+    """
+    standards = load_standards()
+    known_ids = set(standards.keys())
+    errors = []
+    warnings = []
+
+    # Collect derives_from edges for cycle detection
+    derives_graph = {}  # id -> list of parent ids
+
+    for sid, std in standards.items():
+        authority = std.get("authority", {})
+        derives_from = authority.get("derives_from", [])
+        references = authority.get("references", [])
+        parent_ids = []
+
+        # Check derives_from edges
+        for edge in derives_from:
+            target_id = edge["id"]
+            if target_id not in known_ids:
+                errors.append(
+                    f"Dangling derives_from: {sid} -> {target_id} (not found in standards/)"
+                )
+            parent_ids.append(target_id)
+
+            # Tier consistency
+            src_tier = std.get("tier")
+            tgt_std = standards.get(target_id, {})
+            tgt_tier = tgt_std.get("tier")
+            if src_tier is not None and tgt_tier is not None:
+                if tgt_tier > src_tier:
+                    errors.append(
+                        f"Tier violation: {sid} (tier {src_tier}) derives_from "
+                        f"{target_id} (tier {tgt_tier}) — parent should be equal or lower tier"
+                    )
+
+        derives_graph[sid] = parent_ids
+
+        # Check references edges
+        for edge in references:
+            target_id = edge["id"]
+            if target_id not in known_ids:
+                errors.append(
+                    f"Dangling reference: {sid} -> {target_id} (not found in standards/)"
+                )
+
+        # Orphan check
+        has_derives = len(derives_from) > 0
+        has_refs = len(references) > 0
+        is_referenced = False
+        for other_sid, other_std in standards.items():
+            if other_sid == sid:
+                continue
+            other_auth = other_std.get("authority", {})
+            for e in other_auth.get("derives_from", []):
+                if e["id"] == sid:
+                    is_referenced = True
+                    break
+            if not is_referenced:
+                for e in other_auth.get("references", []):
+                    if e["id"] == sid:
+                        is_referenced = True
+                        break
+            if is_referenced:
+                break
+
+        if not has_derives and not has_refs and not is_referenced:
+            warnings.append(f"Orphan: {sid} has no authority edges (disconnected from graph)")
+
+    # Cycle detection via DFS
+    visited = set()
+    in_stack = set()
+
+    def has_cycle(node, path):
+        if node in in_stack:
+            cycle = path[path.index(node):]
+            cycle.append(node)
+            errors.append(f"Cycle detected in derives_from: {' -> '.join(cycle)}")
+            return True
+        if node in visited:
+            return False
+        visited.add(node)
+        in_stack.add(node)
+        for parent in derives_graph.get(node, []):
+            if parent in known_ids:
+                if has_cycle(parent, path + [node]):
+                    return True
+        in_stack.discard(node)
+        return False
+
+    for sid in standards:
+        if sid not in visited:
+            has_cycle(sid, [])
+
+    return errors, warnings
+
+
 def main():
     verbose = "--verbose" in sys.argv
+    run_graph = "--graph" in sys.argv
     specific_files = [a for a in sys.argv[1:] if not a.startswith("--")]
 
     if not HAS_JSONSCHEMA:
@@ -189,7 +311,25 @@ def main():
             for e in errs:
                 print(f"    - {e}")
 
-    if failed > 0 or json_bad > 0:
+    # Authority graph validation
+    graph_errors = 0
+    if run_graph:
+        print()
+        print("--- Authority graph validation ---")
+        errors, warnings = validate_graph(verbose)
+        for w in warnings:
+            print(f"  WARN  {w}")
+        for e in errors:
+            print(f"  FAIL  {e}")
+            graph_errors += 1
+        if not errors and not warnings:
+            print("  All graph checks passed.")
+        elif not errors:
+            print(f"  {len(warnings)} warnings, 0 errors")
+        else:
+            print(f"  {len(warnings)} warnings, {graph_errors} errors")
+
+    if failed > 0 or json_bad > 0 or graph_errors > 0:
         sys.exit(1)
     else:
         print()
