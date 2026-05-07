@@ -586,7 +586,7 @@
 <!-- ITS_HBK_CUI -->
 <g id="node21" class="node">
 <title>ITS_HBK_CUI</title>
-<g id="a_node21"><a xlink:href="https://nodis3.gsfc.nasa.gov/OPD_Docs/ITS-HBK-2810.09-02_.pdf" xlink:title="NASA CUI Handbook" target="_blank">
+<g id="a_node21"><a xlink:href="https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_2810_0007_&amp;page_name=main" xlink:title="NASA CUI Handbook" target="_blank">
 <path fill="#f5f5dc" stroke="black" d="M806,-101C806,-101 688,-101 688,-101 682,-101 676,-95 676,-89 676,-89 676,-77 676,-77 676,-71 682,-65 688,-65 688,-65 806,-65 806,-65 812,-65 818,-71 818,-77 818,-77 818,-89 818,-89 818,-95 812,-101 806,-101"/>
 <text xml:space="preserve" text-anchor="middle" x="747" y="-77.2" font-family="Helvetica,sans-Serif" font-size="14.00">ITS&#45;HBK&#45;2810.09&#45;02</text>
 </a>

@@ -4,10 +4,10 @@
   "short_name": "ITS-HBK-2810.09-02",
   "type": "handbook",
   "issuing_organization": "National Aeronautics and Space Administration",
-  "url": "https://nodis3.gsfc.nasa.gov/OPD_Docs/ITS-HBK-2810.09-02_.pdf",
+  "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_2810_0007_&page_name=main",
   "status": "active",
   "tier": 9,
-  "notes": "Operational handbook providing step-by-step procedures for NASA CUI handling, marking, and safeguarding. Source PDF at the canonical URL is no longer publicly accessible (NASA-internal). Referenced for authority chain only.",
+  "notes": "Operational handbook providing step-by-step procedures for NASA CUI handling, marking, and safeguarding. Original canonical URL (https://nodis3.gsfc.nasa.gov/OPD_Docs/ITS-HBK-2810.09-02_.pdf) returns 404 — NASA does not appear to host this handbook publicly anymore, and it may itself be outdated. URL points at the parent NPR 2810.7 NODIS page for context. Included in the catalog for authority-chain completeness only.",
   "authority": {
     "derives_from": [
       {

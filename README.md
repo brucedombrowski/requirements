@@ -103,12 +103,14 @@ dotted arrows are lateral references (`authority.references`) — used
 when a standard cites another document without deriving authority from
 it (e.g., a NIST SP citing a FIPS for cryptographic requirements).
 
-[![Regulatory authority graph](docs/authority-graph.svg)](https://brucedombrowski.github.io/requirements/)
+[![Regulatory authority graph](docs/authority-graph.svg)](docs/authority-graph.pdf)
 
-> **Interactive version:** [brucedombrowski.github.io/requirements](https://brucedombrowski.github.io/requirements/)
-> — every node is a clickable link to that standard's canonical source.
-> (GitHub strips inline SVG interactivity in the README, so the live
-> graph is hosted via GitHub Pages.)
+> **Clickable version:** download
+> [`docs/authority-graph.pdf`](docs/authority-graph.pdf) — every node
+> is a hyperlink to that standard's canonical source. Click the image
+> above to grab the PDF, then click any node in your PDF viewer.
+> (GitHub renders SVGs in READMEs as static images, so links inside
+> the embedded SVG aren't directly clickable here.)
 
 **Current scope:** 21 standards across 10 tiers — Constitution,
 statute, executive order, OMB policy, federal regulation, FIPS, NIST
