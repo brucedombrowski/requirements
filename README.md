@@ -87,22 +87,28 @@ git submodule update --init
 
 ## Regulatory Authority Graph
 
-NPR 2810.7 derives its authority through a chain that traces back to the
-Constitution. Each standard in `standards/` includes `authority` metadata
-linking to its legal basis. Read the graph **bottom-up**: each arrow
-points from a standard to its authority parent, so an edge reads
-"FIPS 140-2 mandated by 44 U.S.C. Ch. 35".
+Every standard in `standards/` carries `authority` metadata linking it
+to its legal basis. The graph below is the **combined authority web
+for the entire catalog** — every standard tracked here, every parent
+it inherits authority from, every lateral reference it pulls in. As
+more documents are decomposed under `catalog/`, their underlying
+standards get added to `standards/` and the graph extends accordingly.
 
-Solid arrows are authority edges (`authority.derives_from`); dotted
-arrows are lateral references (`authority.references`) — these are how a
-standard like NPR 2810.7 pulls in FIPS 140-2 or 5 U.S.C. §552 without
-inheriting authority from them.
+Read it **bottom-up**: each arrow points from a standard to its
+authority parent, so an edge reads "FIPS 140-2 mandated by 44 U.S.C.
+Ch. 35". Solid arrows are authority edges (`authority.derives_from`);
+dotted arrows are lateral references (`authority.references`) — used
+when a standard cites another document without deriving authority from
+it (e.g., a NIST SP citing a FIPS for cryptographic requirements).
 
 ![Regulatory authority graph](docs/authority-graph.svg)
 
-21 standards, 34 authority edges, 20 lateral reference edges.
+**Current scope:** 21 standards across 10 tiers — Constitution,
+statute, executive order, OMB policy, federal regulation, FIPS, NIST
+SP / NARA, agency policy, agency procedure, handbook. 34 authority
+edges, 20 lateral reference edges.
 
-Regenerate with:
+Regenerate the SVG after adding or modifying any `standards/*.json`:
 
 ```bash
 python tools/authority-graph.py --format dot | dot -Tsvg > docs/authority-graph.svg
