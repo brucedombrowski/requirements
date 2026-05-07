@@ -1,0 +1,31 @@
+{
+  "id": "NIST-SP-800-171-R3",
+  "name": "Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations",
+  "short_name": "NIST SP 800-171 Rev 3",
+  "type": "standard",
+  "issuing_organization": "National Institute of Standards and Technology",
+  "revision": "Rev 3",
+  "publication_date": "2024-05-14",
+  "url": "https://csrc.nist.gov/pubs/sp/800/171/r3/final",
+  "local_copy": "sources/nist/NIST.SP.800-171r3.pdf",
+  "sha256": "3e4631df8b5d61f40a6e542b52779ef30ddbbfff31e09214fa94ad6e6f5e6d08",
+  "date_accessed": "2026-05-07",
+  "status": "active",
+  "tier": 6,
+  "supersedes": "NIST-SP-800-171",
+  "notes": "Final May 2024. Restructures the 800-171 family numbering (e.g., 03.01.01) and aligns with 800-53 Rev 5. Adoption is rolling out — DoD CMMC and many federal contracts still anchor on Rev 2.",
+  "authority": {
+    "derives_from": [
+      {
+        "id": "NIST-SP-800-53",
+        "relationship": "derived_from",
+        "note": "Requirements derived from moderate-baseline 800-53 Rev 5 controls tailored for nonfederal systems."
+      },
+      {
+        "id": "32-CFR-2002",
+        "relationship": "mandated_by",
+        "note": "CUI regulation requires nonfederal systems handling CUI to meet 800-171 requirements."
+      }
+    ]
+  }
+}
