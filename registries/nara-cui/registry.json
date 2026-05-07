@@ -1,0 +1,1054 @@
+{
+  "registry_info": {
+    "title": "CUI Registry",
+    "publisher": "National Archives and Records Administration (NARA)",
+    "authority": ["Executive Order 13556", "32 CFR Part 2002"],
+    "url": "https://www.archives.gov/cui",
+    "description": "The Government-wide online repository for Federal-level guidance regarding CUI policy and practice. Established under Executive Order 13556 and implemented via 32 CFR Part 2002. NARA serves as the CUI Executive Agent, with the Information Security Oversight Office (ISOO) handling operational oversight.",
+    "cui_types": {
+      "basic": "The subset of CUI for which the authorizing law, regulation, or Government-wide policy does not set out specific handling or dissemination controls. Agencies apply uniform controls from Executive Order 13556 and 32 CFR Part 2002. The controls for all CUI Basic categories and subcategories are the same.",
+      "specified": "The subset of CUI in which the authorizing law, regulation, or Government-wide policy contains specific handling controls that it requires or permits agencies to use that differ from those for CUI Basic. The controls for CUI Specified categories can differ from CUI Basic controls and from each other. CUI Basic controls apply to those aspects of CUI Specified where the authorizing laws do not provide specific guidance."
+    },
+    "sources": {
+      "category_list": {
+        "title": "CUI Registry: Category List",
+        "url": "https://www.archives.gov/cui/registry/category-list",
+        "last_reviewed": "2025-03-06",
+        "date_accessed": "2026-02-19",
+        "citation_mla": "\"CUI Registry: Category List.\" National Archives, National Archives and Records Administration, 6 Mar. 2025, www.archives.gov/cui/registry/category-list. Accessed 19 Feb. 2026."
+      },
+      "category_marking_list": {
+        "title": "CUI Category Marking List",
+        "url": "https://www.archives.gov/cui/registry/category-marking-list",
+        "last_reviewed": "2024-04-09",
+        "date_accessed": "2026-02-19",
+        "citation_mla": "\"CUI Category Marking List.\" National Archives, National Archives and Records Administration, 9 Apr. 2024, www.archives.gov/cui/registry/category-marking-list. Accessed 19 Feb. 2026."
+      }
+    }
+  },
+  "organizational_index_groupings": [
+    {
+      "name": "Critical Infrastructure",
+      "categories": [
+        {
+          "name": "Ammonium Nitrate",
+          "marking": "CRITAN",
+          "banner_specified": "CUI//SP-CRITAN",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/ammonium-nitrate"
+        },
+        {
+          "name": "Chemical-terrorism Vulnerability Information",
+          "marking": "CVI",
+          "banner_specified": "CUI//SP-CVI",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/chemical-terrorism-vulnerability-info"
+        },
+        {
+          "name": "Critical Energy Infrastructure Information",
+          "marking": "CEII",
+          "banner_specified": "CUI//SP-CEII",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/critical-energy-infrastructure-info"
+        },
+        {
+          "name": "Emergency Management",
+          "marking": "EMGT",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/emergency-management"
+        },
+        {
+          "name": "General Critical Infrastructure Information",
+          "marking": "CRIT",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/general-critical-infrastructure-info"
+        },
+        {
+          "name": "Information Systems Vulnerability Information",
+          "marking": "ISVI",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/information-systems-vulnerability-info"
+        },
+        {
+          "name": "Physical Security",
+          "marking": "PHYS",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/physical-security"
+        },
+        {
+          "name": "Protected Critical Infrastructure Information",
+          "marking": "PCII",
+          "banner_specified": "CUI//SP-PCII",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/protected-critical-infrastructure-info"
+        },
+        {
+          "name": "SAFETY Act Information",
+          "marking": "SAFE",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/safety-act-info"
+        },
+        {
+          "name": "Toxic Substances",
+          "marking": "TSCA",
+          "banner_specified": "CUI//SP-TSCA",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/toxic-substances"
+        },
+        {
+          "name": "Water Assessments",
+          "marking": "WATER",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/water-assessments"
+        }
+      ]
+    },
+    {
+      "name": "Defense",
+      "categories": [
+        {
+          "name": "Controlled Technical Information",
+          "marking": "CTI",
+          "banner_specified": "CUI//SP-CTI",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/controlled-technical-info"
+        },
+        {
+          "name": "DoD Critical Infrastructure Security Information",
+          "marking": "DCRIT",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/dod-critical-infrastructure-security-info"
+        },
+        {
+          "name": "Naval Nuclear Propulsion Information",
+          "marking": "NNPI",
+          "banner_specified": "CUI//SP-NNPI",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/naval-nuclear-propulsion-info"
+        },
+        {
+          "name": "Privileged Safety Information",
+          "marking": "PSI",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/privileged-safety-info"
+        },
+        {
+          "name": "Unclassified Controlled Nuclear Information - Defense",
+          "marking": "DCNI",
+          "banner_specified": "CUI//SP-DCNI",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/ucni-defense"
+        }
+      ]
+    },
+    {
+      "name": "Export Control",
+      "categories": [
+        {
+          "name": "Export Controlled",
+          "marking": "EXPT",
+          "banner_specified": "CUI//SP-EXPT",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/export-controlled"
+        },
+        {
+          "name": "Export Controlled Research",
+          "marking": "EXPTR",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/export-controlled-research"
+        }
+      ]
+    },
+    {
+      "name": "Financial",
+      "categories": [
+        {
+          "name": "Bank Secrecy",
+          "marking": "FSEC",
+          "banner_specified": "CUI//SP-FSEC",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/bank-secrecy"
+        },
+        {
+          "name": "Budget",
+          "marking": "BUDG",
+          "banner_specified": "CUI//SP-BUDG",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/budget"
+        },
+        {
+          "name": "Comptroller General",
+          "marking": "COMPT",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/comptroller-general"
+        },
+        {
+          "name": "Consumer Complaint Information",
+          "marking": "CCI",
+          "banner_specified": "CUI//SP-CCI",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/consumer-complaint-info"
+        },
+        {
+          "name": "Electronic Funds Transfer",
+          "marking": "XFER",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/electronic-funds-transfer"
+        },
+        {
+          "name": "Federal Housing Finance Non-Public Information",
+          "marking": "FHFANPI",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/federal-housing-finance-non-public-info"
+        },
+        {
+          "name": "Financial Supervision Information",
+          "marking": "FSI",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/financial-supervision-info"
+        },
+        {
+          "name": "General Financial Information",
+          "marking": "FNC",
+          "banner_specified": "CUI//SP-FNC",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/general-financial-info"
+        },
+        {
+          "name": "International Financial Institutions",
+          "marking": "FINT",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/international-financial-institutions"
+        },
+        {
+          "name": "Mergers",
+          "marking": "MERG",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/mergers"
+        },
+        {
+          "name": "Net Worth",
+          "marking": "NETW",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/net-worth"
+        },
+        {
+          "name": "Retirement",
+          "marking": "RTR",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/retirement"
+        }
+      ]
+    },
+    {
+      "name": "Immigration",
+      "categories": [
+        {
+          "name": "Asylee",
+          "marking": "ASYL",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/asylee"
+        },
+        {
+          "name": "Battered Spouse or Child",
+          "marking": "BATT",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/battered-spouse-or-child"
+        },
+        {
+          "name": "Permanent Resident Status",
+          "marking": "RESD",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/permanent-resident-status"
+        },
+        {
+          "name": "Status Adjustment",
+          "marking": "ADJ",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/status-adjustment"
+        },
+        {
+          "name": "Temporary Protected Status",
+          "marking": "PROT",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/temporary-protected-status"
+        },
+        {
+          "name": "Victims of Human Trafficking",
+          "marking": "IVIC",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/victims-of-human-trafficking"
+        },
+        {
+          "name": "Visas",
+          "marking": "VISA",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/visas"
+        }
+      ]
+    },
+    {
+      "name": "Intelligence",
+      "categories": [
+        {
+          "name": "Agriculture",
+          "marking": "AG",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/agriculture"
+        },
+        {
+          "name": "Foreign Intelligence Surveillance Act",
+          "marking": "FISA",
+          "banner_specified": "CUI//SP-FISA",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/foreign-intelligence-surveillance-act"
+        },
+        {
+          "name": "Foreign Intelligence Surveillance Act Business Records",
+          "marking": "FISAB",
+          "banner_specified": "CUI//SP-FISAB",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/fisa-business-records"
+        },
+        {
+          "name": "General Intelligence",
+          "marking": "INTEL",
+          "banner_specified": "CUI//SP-INTEL",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/general-intelligence"
+        },
+        {
+          "name": "Geodetic Product Information",
+          "marking": "GEO",
+          "banner_specified": "CUI//SP-GEO",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/geodetic-product-info"
+        },
+        {
+          "name": "Intelligence Financial Records",
+          "marking": "IFNC",
+          "banner_specified": "CUI//SP-IFNC",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/intelligence-financial-records"
+        },
+        {
+          "name": "Internal Data",
+          "marking": "ID",
+          "banner_specified": "CUI//SP-ID",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/internal-data"
+        },
+        {
+          "name": "Operations Security",
+          "marking": "OPSEC",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/operations-security"
+        }
+      ]
+    },
+    {
+      "name": "International Agreements",
+      "categories": [
+        {
+          "name": "International Agreement Information",
+          "marking": "INTL",
+          "banner_specified": "CUI//SP-INTL",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/international-agreement-info"
+        }
+      ]
+    },
+    {
+      "name": "Law Enforcement",
+      "categories": [
+        {
+          "name": "Accident Investigation",
+          "marking": "AIV",
+          "banner_specified": "CUI//SP-AIV",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/accident-investigation"
+        },
+        {
+          "name": "Campaign Funds",
+          "marking": "FUND",
+          "banner_specified": "CUI//SP-FUND",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/campaign-funds"
+        },
+        {
+          "name": "Committed Person",
+          "marking": "CMPRS",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/committed-person"
+        },
+        {
+          "name": "Communications",
+          "marking": "LCOMM",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/communications"
+        },
+        {
+          "name": "Controlled Substances",
+          "marking": "SUB",
+          "banner_specified": "CUI//SP-SUB",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/controlled-substances"
+        },
+        {
+          "name": "Criminal History Records Information",
+          "marking": "CHRI",
+          "banner_specified": "CUI//SP-CHRI",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/criminal-history-records-info"
+        },
+        {
+          "name": "DNA",
+          "marking": "LDNA",
+          "banner_specified": "CUI//SP-LDNA",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/dna"
+        },
+        {
+          "name": "General Law Enforcement",
+          "marking": "LEI",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/general-law-enforcement"
+        },
+        {
+          "name": "Informant",
+          "marking": "INF",
+          "banner_specified": "CUI//SP-INF",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/informant"
+        },
+        {
+          "name": "Investigation",
+          "marking": "INV",
+          "banner_specified": "CUI//SP-INV",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/investigation"
+        },
+        {
+          "name": "Juvenile",
+          "marking": "JUV",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/juvenile"
+        },
+        {
+          "name": "Law Enforcement Financial Records",
+          "marking": "LFNC",
+          "banner_specified": "CUI//SP-LFNC",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/law-enforcement-financial-records"
+        },
+        {
+          "name": "National Security Letter",
+          "marking": "LNSL",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/national-security-letter"
+        },
+        {
+          "name": "Pen Register/Trap & Trace",
+          "marking": "TRACE",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/pen-register-trap-trace"
+        },
+        {
+          "name": "Reward",
+          "marking": "RWRD",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/reward"
+        },
+        {
+          "name": "Sex Crime Victim",
+          "marking": "SCV",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/sex-crime-victim"
+        },
+        {
+          "name": "Terrorist Screening",
+          "marking": "LSCRN",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/terrorist-screening"
+        },
+        {
+          "name": "Whistleblower Identity",
+          "marking": "WHSTL",
+          "banner_specified": "CUI//SP-WHSTL",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/whistleblower-identity"
+        }
+      ]
+    },
+    {
+      "name": "Legal",
+      "categories": [
+        {
+          "name": "Administrative Proceedings",
+          "marking": "ADPO",
+          "banner_specified": "CUI//SP-ADPO",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/administrative-proceedings"
+        },
+        {
+          "name": "Child Pornography",
+          "marking": "CHLD",
+          "banner_specified": "CUI//SP-CHLD",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/child-pornography"
+        },
+        {
+          "name": "Child Victim/Witness",
+          "marking": "CVIC",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/child-victim-witness"
+        },
+        {
+          "name": "Collective Bargaining",
+          "marking": "BARG",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/collective-bargaining"
+        },
+        {
+          "name": "Federal Grand Jury",
+          "marking": "JURY",
+          "banner_specified": "CUI//SP-JURY",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/federal-grand-jury"
+        },
+        {
+          "name": "Legal Privilege",
+          "marking": "PRIVILEGE",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/legal-privilege"
+        },
+        {
+          "name": "Legislative Materials",
+          "marking": "LMI",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/legislative-materials"
+        },
+        {
+          "name": "Presentence Report",
+          "marking": "PRE",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/presentence-report"
+        },
+        {
+          "name": "Prior Arrest",
+          "marking": "PRIOR",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/prior-arrest"
+        },
+        {
+          "name": "Protective Order",
+          "marking": "LPROT",
+          "banner_specified": "CUI//SP-LPROT",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/protective-order"
+        },
+        {
+          "name": "Victim",
+          "marking": "LVIC",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/victim"
+        },
+        {
+          "name": "Witness Protection",
+          "marking": "WIT",
+          "banner_specified": "CUI//SP-WIT",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/witness-protection"
+        }
+      ]
+    },
+    {
+      "name": "Natural and Cultural Resources",
+      "categories": [
+        {
+          "name": "Archaeological Resources",
+          "marking": "ARCHR",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/archaeological-resources"
+        },
+        {
+          "name": "Historic Properties",
+          "marking": "HISTP",
+          "banner_specified": "CUI//SP-HISTP",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/historic-properties"
+        },
+        {
+          "name": "National Park System Resources",
+          "marking": "NPSR",
+          "banner_specified": "CUI//SP-NPSR",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/national-park-system-resources"
+        }
+      ]
+    },
+    {
+      "name": "North Atlantic Treaty Organization (NATO)",
+      "categories": [
+        {
+          "name": "NATO Restricted",
+          "marking": null,
+          "banner_specified": null,
+          "banner_basic": null,
+          "notes": "NATO markings follow separate NATO security classification guidelines, not CUI marking conventions.",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/nato-restricted"
+        },
+        {
+          "name": "NATO Unclassified",
+          "marking": null,
+          "banner_specified": null,
+          "banner_basic": null,
+          "notes": "NATO markings follow separate NATO security classification guidelines, not CUI marking conventions.",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/nato-unclassified"
+        }
+      ]
+    },
+    {
+      "name": "Nuclear",
+      "categories": [
+        {
+          "name": "General Nuclear",
+          "marking": "NUC",
+          "banner_specified": "CUI//SP-NUC",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/general-nuclear"
+        },
+        {
+          "name": "Nuclear Recommendation Material",
+          "marking": "RECCOM",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/nuclear-recommendation-material"
+        },
+        {
+          "name": "Nuclear Security-Related Information",
+          "marking": "SRI",
+          "banner_specified": "CUI//SP-SRI",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/nuclear-security-related-info"
+        },
+        {
+          "name": "Safeguards Information",
+          "marking": "SGI",
+          "banner_specified": "CUI//SP-SGI",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/safeguards-info"
+        },
+        {
+          "name": "Unclassified Controlled Nuclear Information - Energy",
+          "marking": "UCNI",
+          "banner_specified": "CUI//SP-UCNI",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/ucni-energy"
+        }
+      ]
+    },
+    {
+      "name": "Patent",
+      "categories": [
+        {
+          "name": "Patent Applications",
+          "marking": "APP",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/patent-applications"
+        },
+        {
+          "name": "Inventions",
+          "marking": "INVENT",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/inventions"
+        },
+        {
+          "name": "Secrecy Orders",
+          "marking": "PSEC",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/secrecy-orders"
+        }
+      ]
+    },
+    {
+      "name": "Privacy",
+      "categories": [
+        {
+          "name": "Contract Use",
+          "marking": "CONTRACT",
+          "banner_specified": "CUI//SP-CONTRACT",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/contract-use"
+        },
+        {
+          "name": "Death Records",
+          "marking": "DREC",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/death-records"
+        },
+        {
+          "name": "General Privacy",
+          "marking": "PRVCY",
+          "banner_specified": "CUI//SP-PRVCY",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/privacy"
+        },
+        {
+          "name": "Genetic Information",
+          "marking": "GENETIC",
+          "banner_specified": "CUI//SP-GENETIC",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/genetic-info"
+        },
+        {
+          "name": "Health Information",
+          "marking": "HLTH",
+          "banner_specified": "CUI//SP-HLTH",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/health-info"
+        },
+        {
+          "name": "Inspector General Protected",
+          "marking": "PRIIG",
+          "banner_specified": "CUI//SP-PRIIG",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/inspector-general-protected"
+        },
+        {
+          "name": "Military Personnel Records",
+          "marking": "MIL",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/military-personnel-records"
+        },
+        {
+          "name": "Personnel Records",
+          "marking": "PERS",
+          "banner_specified": "CUI//SP-PERS",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/personnel-records"
+        },
+        {
+          "name": "Student Records",
+          "marking": "STUD",
+          "banner_specified": "CUI//SP-STUD",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/student-records"
+        }
+      ]
+    },
+    {
+      "name": "Procurement and Acquisition",
+      "categories": [
+        {
+          "name": "General Procurement and Acquisition",
+          "marking": "PROCURE",
+          "banner_specified": "CUI//SP-PROCURE",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/general-procurement-and-acquisition"
+        },
+        {
+          "name": "Small Business Research and Technology",
+          "marking": "SBIZ",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/small-business-research-and-technology"
+        },
+        {
+          "name": "Source Selection",
+          "marking": "SSEL",
+          "banner_specified": "CUI//SP-SSEL",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/source-selection"
+        }
+      ]
+    },
+    {
+      "name": "Proprietary Business Information",
+      "categories": [
+        {
+          "name": "Entity Registration Information",
+          "marking": "CONREG",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/entity-registration-info"
+        },
+        {
+          "name": "General Proprietary Business Information",
+          "marking": "PROPIN",
+          "banner_specified": "CUI//SP-PROPIN",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/general-proprietary-business-info"
+        },
+        {
+          "name": "Ocean Common Carrier and Marine Terminal Operator Agreements",
+          "marking": "OCCMTO",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/ocean-common-carrier-and-marine-terminal-operator-agreements"
+        },
+        {
+          "name": "Ocean Common Carrier Service Contracts",
+          "marking": "SERV",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/ocean-common-carrier-service-contracts"
+        },
+        {
+          "name": "Proprietary Manufacturer",
+          "marking": "MFC",
+          "banner_specified": "CUI//SP-MFC",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/proprietary-manufacturer"
+        },
+        {
+          "name": "Proprietary Postal",
+          "marking": "POST",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/proprietary-postal"
+        }
+      ]
+    },
+    {
+      "name": "Provisional",
+      "notes": "Provisional categories are pending finalization. They are treated as CUI Basic until formally established with permanent markings.",
+      "categories": [
+        {
+          "name": "Homeland Security Agreement Information",
+          "marking": null,
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/homeland-security-agreement-info"
+        },
+        {
+          "name": "Homeland Security Enforcement Information",
+          "marking": null,
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/homeland-security-enforcement-info"
+        },
+        {
+          "name": "Information Systems Vulnerability Information - Homeland",
+          "marking": null,
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/information-systems-vulnerability-info-homeland"
+        },
+        {
+          "name": "International Agreement Information - Homeland",
+          "marking": null,
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/international-agreement-info-homeland"
+        },
+        {
+          "name": "Operations Security Information",
+          "marking": null,
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/operations-security-info"
+        },
+        {
+          "name": "Personnel Security Information",
+          "marking": null,
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/personnel-security-info"
+        },
+        {
+          "name": "Physical Security - Homeland",
+          "marking": null,
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/physical-security-homeland"
+        },
+        {
+          "name": "Privacy Information",
+          "marking": null,
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/privacy-info"
+        },
+        {
+          "name": "Sensitive Personally Identifiable Information",
+          "marking": null,
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/sensitive-personally-identifiable-info"
+        }
+      ]
+    },
+    {
+      "name": "Statistical",
+      "categories": [
+        {
+          "name": "Investment Survey",
+          "marking": "SURV",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/investment-survey"
+        },
+        {
+          "name": "Pesticide Producer Survey",
+          "marking": "PEST",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/pesticide-producer-survey"
+        },
+        {
+          "name": "Statistical Information",
+          "marking": "STAT",
+          "banner_specified": "CUI//SP-STAT",
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/statistical-info"
+        },
+        {
+          "name": "US Census",
+          "marking": "CENS",
+          "banner_specified": "CUI//SP-CENS",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/us-census"
+        }
+      ]
+    },
+    {
+      "name": "Tax",
+      "categories": [
+        {
+          "name": "Federal Taxpayer Information",
+          "marking": "TAX",
+          "banner_specified": "CUI//SP-TAX",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/federal-taxpayer-info"
+        },
+        {
+          "name": "Tax Convention",
+          "marking": "CONV",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/tax-convention"
+        },
+        {
+          "name": "Taxpayer Advocate Information",
+          "marking": "TAI",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/taxpayer-advocate-info"
+        },
+        {
+          "name": "Written Determinations",
+          "marking": "WDT",
+          "banner_specified": "CUI//SP-WDT",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/written-determinations"
+        }
+      ]
+    },
+    {
+      "name": "Transportation",
+      "categories": [
+        {
+          "name": "Railroad Safety Analysis Records",
+          "marking": "RAIL",
+          "banner_specified": null,
+          "banner_basic": "CUI",
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/railroad-safety-analysis-records"
+        },
+        {
+          "name": "Sensitive Security Information",
+          "marking": "SSI",
+          "banner_specified": "CUI//SP-SSI",
+          "banner_basic": null,
+          "detail_url": "https://www.archives.gov/cui/registry/category-detail/sensitive-security-info"
+        }
+      ]
+    }
+  ],
+  "limited_dissemination_controls": [
+    {
+      "control": "NOFORN",
+      "description": "Not releasable to foreign nationals"
+    },
+    {
+      "control": "FED ONLY",
+      "description": "Federal employees only"
+    },
+    {
+      "control": "FEDCON",
+      "description": "Federal employees and contractors"
+    },
+    {
+      "control": "NOCON",
+      "description": "Not releasable to contractors"
+    },
+    {
+      "control": "DL ONLY",
+      "description": "Dissemination list only"
+    },
+    {
+      "control": "RELIDO",
+      "description": "Releasable by information disclosure official"
+    },
+    {
+      "control": "REL TO",
+      "description": "Releasable to specified entities"
+    },
+    {
+      "control": "DISPLAY ONLY",
+      "description": "Display only, no further dissemination"
+    },
+    {
+      "control": "Attorney-Client/Attorney-WP",
+      "description": "Attorney-client privilege or attorney work product"
+    }
+  ]
+}
