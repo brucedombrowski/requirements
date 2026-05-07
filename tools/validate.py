@@ -118,6 +118,7 @@ def validate_graph(verbose=False):
     """
     standards = load_standards()
     known_ids = set(standards.keys())
+    stub_ids = {sid for sid, std in standards.items() if std.get("status") == "stub"}
     errors = []
     warnings = []
 
@@ -180,7 +181,7 @@ def validate_graph(verbose=False):
             if is_referenced:
                 break
 
-        if not has_derives and not has_refs and not is_referenced:
+        if not has_derives and not has_refs and not is_referenced and sid not in stub_ids:
             warnings.append(f"Orphan: {sid} has no authority edges (disconnected from graph)")
 
     # Cycle detection via DFS
@@ -369,6 +370,14 @@ def main():
         for e in errors:
             print(f"  FAIL  {e}")
             graph_errors += 1
+        # Report stub count alongside the graph summary so the curation
+        # backlog stays visible (per docs/curation-policy.md).
+        stub_count = sum(
+            1 for path in (REPO_ROOT / "standards").glob("*.json")
+            if load_json(path).get("status") == "stub"
+        )
+        if stub_count:
+            print(f"  Stubs in catalog: {stub_count} (use `grep -l 'stub' standards/*.json` to list)")
         if not errors and not warnings:
             print("  All graph checks passed.")
         elif not errors:

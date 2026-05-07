@@ -74,8 +74,8 @@
     },
     "status": {
       "type": "string",
-      "enum": ["active", "withdrawn", "superseded"],
-      "description": "Current status."
+      "enum": ["active", "withdrawn", "superseded", "stub"],
+      "description": "Current status. \"stub\" indicates a placeholder entry referenced by other standards but not yet fully reviewed (no local_copy, sha256, authority graph, or annotations). See docs/curation-policy.md."
     },
     "notes": {
       "type": "string",

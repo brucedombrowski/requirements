@@ -1,0 +1,13 @@
+{
+  "id": "NIST-SP-800-60",
+  "name": "Guide for Mapping Types of Information and Information Systems to Security Categories",
+  "short_name": "NIST SP 800-60 Vol. 1 Rev. 1",
+  "type": "standard",
+  "issuing_organization": "National Institute of Standards and Technology",
+  "revision": "Vol. 1 Rev. 1",
+  "publication_date": "2008-08-01",
+  "url": "https://csrc.nist.gov/pubs/sp/800/60/v1/r1/final",
+  "status": "stub",
+  "tier": 6,
+  "notes": "STUB. Implements FISMA task 2 (categorization guidelines) — companion to FIPS 199's task 1. Referenced from sources/nist/NIST.FIPS.199.notes.json. Promote to full standard (with local_copy, sha256, authority graph, annotation file) when actively decomposing a project that needs 800-60 mappings. NIST SP 800-60 Rev. 2 is in initial-working-draft as of 2024."
+}

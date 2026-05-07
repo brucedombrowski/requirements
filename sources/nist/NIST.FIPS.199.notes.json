@@ -23,6 +23,28 @@
       "resolved_by": "Federal Information Security Modernization Act of 2014, Pub. L. No. 113–283.",
       "verified_date": "2026-05-07",
       "verified_by_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title44-section3552&num=0&edition=prelim"
+    },
+    {
+      "type": "stale_cross_reference",
+      "occurs_in": "Section 2 (Applicability), p. 1: \"information that has been determined pursuant to Executive Order 12958, as amended by Executive Order 13292, or any predecessor order, … to require protection against unauthorized disclosure and is marked to indicate its classified status\".",
+      "description": "FIPS 199 cites Executive Order 12958 (Clinton, 1995) and its amendment Executive Order 13292 (Bush, 2003) to define which information is excluded from FIPS 199's scope as classified. Both orders were revoked in their entirety by Executive Order 13526, \"Classified National Security Information\" (Obama, 29 December 2009), which establishes the current uniform system for classifying, safeguarding, and declassifying national security information.",
+      "as_published_text": "Executive Order 12958, as amended by Executive Order 13292, or any predecessor order",
+      "current_location": "Executive Order 13526 (December 29, 2009).",
+      "resolved_by": "Executive Order 13526 (Sec. 6.2(c)) explicitly revokes EO 12958 and EO 13292.",
+      "verified_date": "2026-05-07",
+      "verified_by_url": "https://obamawhitehouse.archives.gov/the-press-office/executive-order-classified-national-security-information"
+    },
+    {
+      "type": "interpretation_note",
+      "occurs_in": "Section 1 (Purpose), p. 1.",
+      "description": "Section 1 frames FIPS 199 as task 1 of three FISMA mandates to NIST: (1) standards to categorize information and systems — implemented by FIPS 199; (2) guidelines recommending information types per category — implemented by NIST SP 800-60; (3) minimum security requirements per category — implemented by FIPS 200 + NIST SP 800-53. This makes FIPS 199's categorization output the dispatch key for the entire NIST infosec stack: every downstream control selection depends on the category assigned here.",
+      "note": "NIST SP 800-60 Vol. 1 Rev. 1 (Aug 2008) is the operative implementation of task 2; Rev. 2 was in initial-working-draft as of 2024. NIST SP 800-60 is recorded in standards/ as a stub pending full review."
+    },
+    {
+      "type": "interpretation_note",
+      "occurs_in": "Section 1 (Purpose), p. 1, paragraph 1: cites FISMA 2002.",
+      "description": "FIPS 199's references to FISMA-as-Title-III-of-P.L.-107-347 are P.L. citations and not technically stale (Public Law numbers are permanent historical identifiers). However, the substantive FISMA framework cited in Section 1 was repealed and replaced by the Federal Information Security Modernization Act of 2014 (Pub. L. No. 113-283). Readers tracing operative law should follow the 2014 successor codified at 44 U.S.C. §§ 3551-3558. The CIA and national-security-system definitions FIPS 199 inherits from FISMA 2002 are now at § 3552(b)(3) and § 3552(b)(6) (see other annotations).",
+      "note": "Distinct issue from the § 3542 stale-cross-reference annotations: the P.L. citation here is fine as written; the supersession is informational for readers navigating to current authority."
     }
   ]
 }
