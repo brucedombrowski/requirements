@@ -6,9 +6,11 @@ Usage:
     python tools/validate.py              # Validate all JSON files
     python tools/validate.py --verbose    # Show per-file results
     python tools/validate.py --graph      # Also validate authority graph
+    python tools/validate.py --sources    # Also verify SHA-256 of source PDFs
     python tools/validate.py FILE...      # Validate specific files
 """
 
+import hashlib
 import json
 import os
 import sys
@@ -206,9 +208,51 @@ def validate_graph(verbose=False):
     return errors, warnings
 
 
+def validate_sources():
+    """Verify each standard's local_copy file exists and matches its sha256.
+
+    Returns (errors, warnings).
+    """
+    standards = load_standards()
+    errors = []
+    warnings = []
+
+    for sid, std in standards.items():
+        local_copy = std.get("local_copy")
+        sha256 = std.get("sha256")
+        if not local_copy:
+            if not sha256:
+                continue  # No local copy claimed; nothing to verify.
+            errors.append(f"{sid}: sha256 set without local_copy")
+            continue
+
+        path = REPO_ROOT / local_copy
+        if not path.exists():
+            errors.append(f"{sid}: local_copy missing: {local_copy}")
+            continue
+
+        if not sha256:
+            warnings.append(f"{sid}: local_copy set without sha256 (cannot verify integrity)")
+            continue
+
+        h = hashlib.sha256()
+        with open(path, "rb") as f:
+            for chunk in iter(lambda: f.read(65536), b""):
+                h.update(chunk)
+        actual = h.hexdigest()
+        if actual != sha256:
+            errors.append(
+                f"{sid}: sha256 mismatch for {local_copy} "
+                f"(expected {sha256[:12]}…, got {actual[:12]}…)"
+            )
+
+    return errors, warnings
+
+
 def main():
     verbose = "--verbose" in sys.argv
     run_graph = "--graph" in sys.argv
+    run_sources = "--sources" in sys.argv
     specific_files = [a for a in sys.argv[1:] if not a.startswith("--")]
 
     if not HAS_JSONSCHEMA:
@@ -329,7 +373,25 @@ def main():
         else:
             print(f"  {len(warnings)} warnings, {graph_errors} errors")
 
-    if failed > 0 or json_bad > 0 or graph_errors > 0:
+    # Source-document integrity verification
+    source_errors = 0
+    if run_sources:
+        print()
+        print("--- Source document integrity ---")
+        errors, warnings = validate_sources()
+        for w in warnings:
+            print(f"  WARN  {w}")
+        for e in errors:
+            print(f"  FAIL  {e}")
+            source_errors += 1
+        if not errors and not warnings:
+            print("  All source SHA-256 digests verified.")
+        elif not errors:
+            print(f"  {len(warnings)} warnings, 0 errors")
+        else:
+            print(f"  {len(warnings)} warnings, {source_errors} errors")
+
+    if failed > 0 or json_bad > 0 or graph_errors > 0 or source_errors > 0:
         sys.exit(1)
     else:
         print()

@@ -6,7 +6,10 @@
   "issuing_organization": "United States Government",
   "publication_date": "1788-06-21",
   "url": "https://www.archives.gov/founding-docs/constitution",
+  "local_copy": "sources/federal/us-constitution.pdf",
+  "sha256": "7f29c4a79e310cc7bcee5f3fd07fb1367e463bd4530fa5d854ebdd4fd4402e57",
+  "date_accessed": "2026-05-07",
   "status": "active",
   "tier": 0,
-  "notes": "Supreme law of the United States. Article I §8 grants Congress legislative power; Article II §1 vests executive power in the President, authorizing executive orders that establish programs like CUI."
+  "notes": "Supreme law of the United States. Article I \u00a78 grants Congress legislative power; Article II \u00a71 vests executive power in the President, authorizing executive orders that establish programs like CUI."
 }

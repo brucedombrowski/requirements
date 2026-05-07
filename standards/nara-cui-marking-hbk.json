@@ -5,6 +5,9 @@
   "type": "handbook",
   "issuing_organization": "National Archives and Records Administration",
   "url": "https://www.archives.gov/cui/registry/marking-handbook",
+  "local_copy": "sources/nara/cui-marking-handbook.pdf",
+  "sha256": "37f081eec57a3eba27ba0f267d548068e6c06b8dd5ceb563fe86040eb7d92cc6",
+  "date_accessed": "2026-05-07",
   "status": "active",
   "tier": 6,
   "notes": "Provides detailed guidance on marking CUI, including banner markings, portion markings, and designation indicators.",
@@ -18,7 +21,7 @@
       {
         "id": "32-CFR-2002",
         "relationship": "implements",
-        "section": "§2002.20",
+        "section": "\u00a72002.20",
         "note": "Implements marking requirements specified in the CUI regulation."
       }
     ]

@@ -1,10 +1,13 @@
 {
   "id": "51-USC-20132",
-  "name": "National Aeronautics and Space Act — Sec. 20132. Security requirements",
-  "short_name": "51 U.S.C. §20132",
+  "name": "National Aeronautics and Space Act \u2014 Sec. 20132. Security requirements",
+  "short_name": "51 U.S.C. \u00a720132",
   "type": "statute",
   "issuing_organization": "United States Congress",
   "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title51-section20132&num=0&edition=prelim",
+  "local_copy": "sources/federal/51-usc-20132.pdf",
+  "sha256": "aa3ddc6268e610f9051c55051868d452f86b25ec78f5182270954788b184667b",
+  "date_accessed": "2026-05-07",
   "status": "active",
   "tier": 1,
   "notes": "Authorizes NASA to establish security requirements for the protection of information and property.",
@@ -13,7 +16,7 @@
       {
         "id": "USC-CONST",
         "relationship": "authorized_by",
-        "section": "Art I §8",
+        "section": "Art I \u00a78",
         "note": "Congressional authority to make laws governing federal agencies."
       }
     ]

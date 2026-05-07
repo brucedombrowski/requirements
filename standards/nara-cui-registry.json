@@ -7,7 +7,7 @@
   "url": "https://www.archives.gov/cui",
   "status": "active",
   "tier": 6,
-  "notes": "The authoritative registry of CUI categories, subcategories, and associated marking and handling requirements.",
+  "notes": "The authoritative registry of CUI categories, subcategories, and associated marking and handling requirements. Registry is a live web database, not a single document. Local capture available at registries/nara-cui/registry.json.",
   "authority": {
     "derives_from": [
       {
@@ -18,7 +18,7 @@
       {
         "id": "32-CFR-2002",
         "relationship": "implements",
-        "section": "§2002.10",
+        "section": "\u00a72002.10",
         "note": "Regulation requires NARA to maintain the authoritative CUI category list."
       }
     ]

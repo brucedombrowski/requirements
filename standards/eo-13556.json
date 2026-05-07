@@ -6,6 +6,9 @@
   "issuing_organization": "Executive Office of the President",
   "publication_date": "2010-11-04",
   "url": "https://www.archives.gov/cui/registry/policy-guidance",
+  "local_copy": "sources/federal/eo-13556.pdf",
+  "sha256": "84eafe59e43010d5aba14bd9c1f79ecc4ff817d3a9d8a1e92b34aa0916b2de8a",
+  "date_accessed": "2026-05-07",
   "status": "active",
   "tier": 2,
   "notes": "Established the government-wide CUI program to standardize handling of unclassified information requiring safeguarding.",
@@ -14,7 +17,7 @@
       {
         "id": "USC-CONST",
         "relationship": "authorized_by",
-        "section": "Art II §1",
+        "section": "Art II \u00a71",
         "note": "Executive orders derive authority from the President's constitutional executive power."
       }
     ]

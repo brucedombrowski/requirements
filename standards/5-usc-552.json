@@ -1,10 +1,13 @@
 {
   "id": "5-USC-552",
-  "name": "Freedom of Information Act (FOIA) — 5 U.S.C. §552",
-  "short_name": "5 U.S.C. §552 (FOIA)",
+  "name": "Freedom of Information Act (FOIA) \u2014 5 U.S.C. \u00a7552",
+  "short_name": "5 U.S.C. \u00a7552 (FOIA)",
   "type": "statute",
   "issuing_organization": "United States Congress",
   "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&num=0&edition=prelim",
+  "local_copy": "sources/federal/5-usc-552.pdf",
+  "sha256": "c944789debaf13261e5c66e044c1ea170bdc6a64df3f0f430cceb68a17c7dc35",
+  "date_accessed": "2026-05-07",
   "status": "active",
   "tier": 1,
   "notes": "Establishes the public's right to access federal agency records, with enumerated exemptions. CUI marking interacts with FOIA exemptions.",
@@ -13,7 +16,7 @@
       {
         "id": "USC-CONST",
         "relationship": "authorized_by",
-        "section": "Art I §8",
+        "section": "Art I \u00a78",
         "note": "Congressional authority to regulate federal agency operations."
       }
     ]

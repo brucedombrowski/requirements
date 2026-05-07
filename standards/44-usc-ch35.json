@@ -1,10 +1,13 @@
 {
   "id": "44-USC-CH35",
-  "name": "Federal Information Security Modernization Act (FISMA) — 44 U.S.C. Chapter 35",
+  "name": "Federal Information Security Modernization Act (FISMA) \u2014 44 U.S.C. Chapter 35",
   "short_name": "44 U.S.C. Ch. 35 (FISMA)",
   "type": "statute",
   "issuing_organization": "United States Congress",
   "url": "https://uscode.house.gov/view.xhtml?path=/prelim@title44/chapter35&edition=prelim",
+  "local_copy": "sources/federal/44-usc-ch35.pdf",
+  "sha256": "018a1d949a3e5a949f051b4f65329e52906edcced6aa79592f390f2ce8a64eff",
+  "date_accessed": "2026-05-07",
   "status": "active",
   "tier": 1,
   "notes": "Establishes federal information security requirements. Mandates NIST to develop standards and guidelines for federal information systems.",
@@ -13,7 +16,7 @@
       {
         "id": "USC-CONST",
         "relationship": "authorized_by",
-        "section": "Art I §8",
+        "section": "Art I \u00a78",
         "note": "Congressional authority to legislate on federal operations."
       }
     ]

@@ -1,10 +1,13 @@
 {
   "id": "40-USC-11331",
-  "name": "Responsibilities for Federal Information Systems Standards — 40 U.S.C. §11331",
-  "short_name": "40 U.S.C. §11331",
+  "name": "Responsibilities for Federal Information Systems Standards \u2014 40 U.S.C. \u00a711331",
+  "short_name": "40 U.S.C. \u00a711331",
   "type": "statute",
   "issuing_organization": "United States Congress",
   "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title40-section11331&num=0&edition=prelim",
+  "local_copy": "sources/federal/40-usc-11331.pdf",
+  "sha256": "4e0cedd6e5b163af3565a1d74c22dfd622f3542fc151090e20027b133509f945",
+  "date_accessed": "2026-05-07",
   "status": "active",
   "tier": 1,
   "notes": "Directs the Secretary of Commerce (through NIST) to promulgate information security standards and guidelines, including FIPS publications.",
@@ -13,7 +16,7 @@
       {
         "id": "USC-CONST",
         "relationship": "authorized_by",
-        "section": "Art I §8",
+        "section": "Art I \u00a78",
         "note": "Congressional authority to regulate federal IT operations."
       }
     ]

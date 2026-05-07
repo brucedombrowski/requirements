@@ -33,6 +33,8 @@ requirements/
 │       └── nid-2810-135/    # 72 reqs from NID 2810.135 (Expired)
 ├── registries/              # Government registry captures
 │   └── nara-cui/            # NARA CUI Registry (126 categories, 20 groupings)
+├── sources/                 # Local PDF copies of every source document
+│   ├── nist/ nasa/ nara/ federal/
 ├── templates/               # For consuming projects
 │   ├── project-selection.json
 │   └── custom-requirement-set.json
@@ -40,6 +42,20 @@ requirements/
     ├── validate.py          # Validate JSON against schemas
     └── authority-graph.py   # Generate authority graph visualizations
 ```
+
+## Clean-Room Provenance
+
+Every standard in `standards/` references a local PDF copy under `sources/`
+together with a `sha256` digest. This means the requirements decomposition
+is reproducible from a fixed, in-repo source set — not a moving target on
+the open internet. Verify the source set hasn't drifted with:
+
+```bash
+python tools/validate.py --sources
+```
+
+All source documents are US government works, public domain under 17 USC
+§ 105.
 
 ## How Projects Consume This Catalog
 
@@ -175,6 +191,9 @@ python tools/validate.py --verbose
 
 # Validate authority graph integrity
 python tools/validate.py --graph
+
+# Verify SHA-256 of every source document in sources/
+python tools/validate.py --sources
 ```
 
 ## Repo Relationships

@@ -21,6 +21,9 @@ python tools/validate.py catalog/nasa/npr-2810-7/requirements.json
 # Validate authority graph (dangling refs, cycles, tier consistency)
 python tools/validate.py --graph
 
+# Verify SHA-256 of every source PDF in sources/ matches its standard's metadata
+python tools/validate.py --sources
+
 # Generate authority graph (Mermaid to stdout)
 python tools/authority-graph.py
 
@@ -42,6 +45,7 @@ python tools/authority-graph.py --format all
 - `controls/` — NIST control definitions (definition-only, no implementation blocks)
 - `catalog/` — The requirements library organized by issuing authority and document
 - `registries/` — Structured captures of government registries (e.g., NARA CUI Registry)
+- `sources/` — Local PDF copies of every source document, with SHA-256 verification
 - `templates/` — Templates for consuming projects
 - `tools/` — Validation and extraction tooling
 

@@ -7,7 +7,7 @@
   "url": "https://nodis3.gsfc.nasa.gov/OPD_Docs/ITS-HBK-2810.09-02_.pdf",
   "status": "active",
   "tier": 9,
-  "notes": "Operational handbook providing step-by-step procedures for NASA CUI handling, marking, and safeguarding.",
+  "notes": "Operational handbook providing step-by-step procedures for NASA CUI handling, marking, and safeguarding. Source PDF at the canonical URL is no longer publicly accessible (NASA-internal). Referenced for authority chain only.",
   "authority": {
     "derives_from": [
       {
