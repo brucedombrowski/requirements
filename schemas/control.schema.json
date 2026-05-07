@@ -19,6 +19,36 @@
       "format": "uri",
       "description": "Canonical publication URL."
     },
+    "source": {
+      "type": "object",
+      "description": "Provenance for catalogs derived from a machine-readable upstream source (e.g., NIST OSCAL JSON).",
+      "required": ["path", "sha256", "generated_at"],
+      "properties": {
+        "path": {
+          "type": "string",
+          "description": "Repo-relative path to the upstream artifact this catalog was generated from."
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$",
+          "description": "SHA-256 hex digest of the upstream artifact."
+        },
+        "generator": {
+          "type": "string",
+          "description": "Path to the tool that produced this catalog (e.g., tools/oscal-to-catalog.py)."
+        },
+        "generated_at": {
+          "type": "string",
+          "format": "date",
+          "description": "Date this catalog was generated."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Free-form notes about scope, limitations, or hand-curation."
+        }
+      },
+      "additionalProperties": false
+    },
     "controls": {
       "type": "object",
       "description": "Control definitions keyed by control ID.",
