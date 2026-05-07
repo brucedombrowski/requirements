@@ -33,7 +33,7 @@ SCHEMA_MAP = {
         "standards/*.json",
     ],
     "schemas/control.schema.json": [
-        "controls/*/catalog.json",
+        "controls/**/catalog.json",
     ],
     "schemas/project-selection.schema.json": [
         "templates/project-selection.json",

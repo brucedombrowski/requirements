@@ -65,10 +65,11 @@ python tools/authority-graph.py --format all
 5. Run `python tools/validate.py` to verify
 
 ### Adding Controls
-1. Create a directory under `controls/<standard-id>/`
+1. Create a directory under `controls/<standard-id>/<revision>/` (e.g., `controls/nist-800-171/rev3/`)
 2. Add `catalog.json` following `schemas/control.schema.json`
 3. Include only: family, title, description, derived_from
 4. Never include implementation details
+5. When the upstream publishes a machine-readable artifact (OSCAL JSON, CSV, etc.), record its `path` and `sha256` in the `source` block so the catalog is regeneration-traceable
 
 ### Adding Registries
 1. Create a directory under `registries/<registry-id>/`

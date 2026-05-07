@@ -26,7 +26,9 @@ requirements/
 │   └── ...
 ├── controls/                # NIST control definitions (no implementation)
 │   ├── nist-800-53/catalog.json
-│   └── nist-800-171/catalog.json
+│   └── nist-800-171/
+│       ├── rev2/catalog.json
+│       └── rev3/catalog.json
 ├── catalog/                 # The requirements library
 │   └── nasa/
 │       ├── npr-2810-7/      # 72 reqs from NPR 2810.7 (Active)
