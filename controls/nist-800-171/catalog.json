@@ -1,7 +1,13 @@
 {
   "standard": "NIST SP 800-171 Rev 2",
   "title": "Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations",
-  "url": "https://csrc.nist.gov/publications/detail/sp/800-171/rev-2/final",
+  "url": "https://csrc.nist.gov/pubs/sp/800/171/r2/final",
+  "source": {
+    "path": "sources/nist/NIST.SP.800-171r2.pdf",
+    "sha256": "298bdbfcf6a4890a564b225c893230a0b32b2e69e3b98dd898aaeb1d544c5e12",
+    "generated_at": "2026-02-19",
+    "notes": "Hand-extracted starter sample (11 of 110 requirements). NIST does not publish an OSCAL JSON for 800-171 Rev 2 — only Rev 3 — so this catalog cannot be regenerated automatically. Use controls/nist-800-171-r3/catalog.json for full machine-derived coverage on the newer revision."
+  },
   "controls": {
     "3.4.1": {
       "family": "Configuration Management",
