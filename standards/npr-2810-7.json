@@ -1,0 +1,78 @@
+{
+  "id": "NPR-2810-7",
+  "name": "Controlled Unclassified Information",
+  "short_name": "NPR 2810.7",
+  "type": "agency_procedure",
+  "issuing_organization": "National Aeronautics and Space Administration",
+  "publication_date": "2023-10-31",
+  "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_2810_0007_&page_name=main",
+  "status": "active",
+  "tier": 8,
+  "notes": "NASA procedural requirements for implementing the CUI program. Decomposed into 72 requirements in catalog/nasa/npr-2810-7/.",
+  "authority": {
+    "derives_from": [
+      {
+        "id": "EO-13556",
+        "relationship": "implements",
+        "note": "Implements the CUI program established by executive order."
+      },
+      {
+        "id": "32-CFR-2002",
+        "relationship": "implements",
+        "note": "Implements the federal CUI regulation for NASA."
+      },
+      {
+        "id": "NPD-2810-1F",
+        "relationship": "derived_from",
+        "note": "Procedural implementation of NASA's information security policy."
+      },
+      {
+        "id": "44-USC-CH35",
+        "relationship": "mandated_by",
+        "note": "FISMA requires agency-level information security procedures."
+      }
+    ],
+    "references": [
+      {
+        "id": "NIST-SP-800-53",
+        "note": "References 800-53 controls for CUI security requirements."
+      },
+      {
+        "id": "NIST-SP-800-171",
+        "note": "References 800-171 for CUI protection in nonfederal systems."
+      },
+      {
+        "id": "NIST-SP-800-88",
+        "note": "References 800-88 for CUI media sanitization."
+      },
+      {
+        "id": "FIPS-199",
+        "note": "References FIPS 199 for CUI security categorization."
+      },
+      {
+        "id": "FIPS-140-2",
+        "note": "References FIPS 140-2 for cryptographic protection of CUI."
+      },
+      {
+        "id": "NARA-CUI-Registry",
+        "note": "References the NARA CUI Registry for category definitions."
+      },
+      {
+        "id": "NARA-CUI-MARKING-HBK",
+        "note": "References CUI Marking Handbook for marking procedures."
+      },
+      {
+        "id": "5-USC-552",
+        "note": "References FOIA for CUI dissemination and exemptions."
+      },
+      {
+        "id": "5-USC-552A",
+        "note": "References Privacy Act for PII-related CUI categories."
+      },
+      {
+        "id": "OMB-A-130",
+        "note": "References OMB policy for information management requirements."
+      }
+    ]
+  }
+}

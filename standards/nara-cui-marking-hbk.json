@@ -1,0 +1,26 @@
+{
+  "id": "NARA-CUI-MARKING-HBK",
+  "name": "CUI Marking Handbook",
+  "short_name": "NARA CUI Marking Handbook",
+  "type": "handbook",
+  "issuing_organization": "National Archives and Records Administration",
+  "url": "https://www.archives.gov/cui/registry/marking-handbook",
+  "status": "active",
+  "tier": 6,
+  "notes": "Provides detailed guidance on marking CUI, including banner markings, portion markings, and designation indicators.",
+  "authority": {
+    "derives_from": [
+      {
+        "id": "EO-13556",
+        "relationship": "implements",
+        "note": "Implements CUI marking requirements established by the executive order."
+      },
+      {
+        "id": "32-CFR-2002",
+        "relationship": "implements",
+        "section": "§2002.20",
+        "note": "Implements marking requirements specified in the CUI regulation."
+      }
+    ]
+  }
+}

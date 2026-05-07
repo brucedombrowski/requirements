@@ -1,0 +1,21 @@
+{
+  "id": "5-USC-552A",
+  "name": "Privacy Act of 1974 — 5 U.S.C. §552a",
+  "short_name": "5 U.S.C. §552a (Privacy Act)",
+  "type": "statute",
+  "issuing_organization": "United States Congress",
+  "url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552a&num=0&edition=prelim",
+  "status": "active",
+  "tier": 1,
+  "notes": "Governs the collection, maintenance, use, and dissemination of personally identifiable information by federal agencies. A key CUI category authority.",
+  "authority": {
+    "derives_from": [
+      {
+        "id": "USC-CONST",
+        "relationship": "authorized_by",
+        "section": "Art I §8",
+        "note": "Congressional authority to regulate federal records and privacy."
+      }
+    ]
+  }
+}

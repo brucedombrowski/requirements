@@ -6,5 +6,21 @@
   "issuing_organization": "National Archives and Records Administration",
   "url": "https://www.archives.gov/cui",
   "status": "active",
-  "notes": "The authoritative registry of CUI categories, subcategories, and associated marking and handling requirements."
+  "tier": 6,
+  "notes": "The authoritative registry of CUI categories, subcategories, and associated marking and handling requirements.",
+  "authority": {
+    "derives_from": [
+      {
+        "id": "EO-13556",
+        "relationship": "implements",
+        "note": "Executive order directed NARA to establish the CUI Registry."
+      },
+      {
+        "id": "32-CFR-2002",
+        "relationship": "implements",
+        "section": "§2002.10",
+        "note": "Regulation requires NARA to maintain the authoritative CUI category list."
+      }
+    ]
+  }
 }

@@ -1,0 +1,36 @@
+{
+  "id": "NPD-2810-1F",
+  "name": "NASA Information Security Policy",
+  "short_name": "NPD 2810.1F",
+  "type": "agency_policy",
+  "issuing_organization": "National Aeronautics and Space Administration",
+  "url": "https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PD_2810_001F_&page_name=main",
+  "status": "active",
+  "tier": 7,
+  "notes": "Top-level NASA policy for information security. Establishes roles, responsibilities, and requirements for protecting NASA information and information systems.",
+  "authority": {
+    "derives_from": [
+      {
+        "id": "51-USC-20132",
+        "relationship": "authorized_by",
+        "note": "NASA security authority derives from the National Aeronautics and Space Act."
+      },
+      {
+        "id": "44-USC-CH35",
+        "relationship": "mandated_by",
+        "note": "FISMA requires each federal agency to establish an information security program."
+      },
+      {
+        "id": "OMB-A-130",
+        "relationship": "implements",
+        "note": "Implements OMB information management and security requirements for NASA."
+      }
+    ],
+    "references": [
+      {
+        "id": "NIST-SP-800-53",
+        "note": "Adopts NIST 800-53 controls as the baseline for NASA information systems."
+      }
+    ]
+  }
+}

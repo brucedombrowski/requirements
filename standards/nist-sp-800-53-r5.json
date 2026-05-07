@@ -8,5 +8,26 @@
   "publication_date": "2020-09-23",
   "url": "https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final",
   "status": "active",
-  "notes": "The comprehensive catalog of security and privacy controls for federal information systems."
+  "tier": 6,
+  "notes": "The comprehensive catalog of security and privacy controls for federal information systems.",
+  "authority": {
+    "derives_from": [
+      {
+        "id": "44-USC-CH35",
+        "relationship": "mandated_by",
+        "note": "FISMA directs NIST to develop security guidelines for federal systems."
+      },
+      {
+        "id": "FIPS-200",
+        "relationship": "implements",
+        "note": "FIPS 200 mandates the use of 800-53 controls to meet minimum security requirements."
+      }
+    ],
+    "references": [
+      {
+        "id": "FIPS-199",
+        "note": "Uses FIPS 199 categorization to select control baselines."
+      }
+    ]
+  }
 }

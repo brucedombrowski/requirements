@@ -7,5 +7,29 @@
   "publication_date": "2016-09-14",
   "url": "https://www.ecfr.gov/current/title-32/subtitle-B/chapter-XX/part-2002",
   "status": "active",
-  "notes": "Implements EO 13556 by establishing uniform CUI handling requirements across the executive branch."
+  "tier": 4,
+  "notes": "Implements EO 13556 by establishing uniform CUI handling requirements across the executive branch.",
+  "authority": {
+    "derives_from": [
+      {
+        "id": "EO-13556",
+        "relationship": "implements",
+        "note": "Implements the CUI program established by executive order."
+      }
+    ],
+    "references": [
+      {
+        "id": "NIST-SP-800-53",
+        "note": "References 800-53 for security control requirements."
+      },
+      {
+        "id": "NIST-SP-800-88",
+        "note": "References 800-88 for media sanitization requirements."
+      },
+      {
+        "id": "FIPS-199",
+        "note": "References FIPS 199 for security categorization of CUI."
+      }
+    ]
+  }
 }

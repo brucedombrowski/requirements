@@ -1,0 +1,26 @@
+{
+  "id": "ITS-HBK-CUI",
+  "name": "NASA CUI Handbook",
+  "short_name": "ITS-HBK-2810.09-02",
+  "type": "handbook",
+  "issuing_organization": "National Aeronautics and Space Administration",
+  "url": "https://nodis3.gsfc.nasa.gov/OPD_Docs/ITS-HBK-2810.09-02_.pdf",
+  "status": "active",
+  "tier": 9,
+  "notes": "Operational handbook providing step-by-step procedures for NASA CUI handling, marking, and safeguarding.",
+  "authority": {
+    "derives_from": [
+      {
+        "id": "NPR-2810-7",
+        "relationship": "derived_from",
+        "note": "Detailed procedural guidance implementing NPR 2810.7."
+      }
+    ],
+    "references": [
+      {
+        "id": "NARA-CUI-MARKING-HBK",
+        "note": "Aligns with NARA marking guidance."
+      }
+    ]
+  }
+}

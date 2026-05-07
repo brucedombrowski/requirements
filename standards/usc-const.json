@@ -1,0 +1,12 @@
+{
+  "id": "USC-CONST",
+  "name": "Constitution of the United States",
+  "short_name": "U.S. Constitution",
+  "type": "constitutional_provision",
+  "issuing_organization": "United States Government",
+  "publication_date": "1788-06-21",
+  "url": "https://www.archives.gov/founding-docs/constitution",
+  "status": "active",
+  "tier": 0,
+  "notes": "Supreme law of the United States. Article I §8 grants Congress legislative power; Article II §1 vests executive power in the President, authorizing executive orders that establish programs like CUI."
+}

@@ -8,5 +8,20 @@
   "publication_date": "2020-02-21",
   "url": "https://csrc.nist.gov/pubs/sp/800/171/r3/final",
   "status": "active",
-  "notes": "Defines security requirements for protecting CUI in nonfederal systems. Rev 3 is available but Rev 2 remains widely referenced."
+  "tier": 6,
+  "notes": "Defines security requirements for protecting CUI in nonfederal systems. Rev 3 is available but Rev 2 remains widely referenced.",
+  "authority": {
+    "derives_from": [
+      {
+        "id": "NIST-SP-800-53",
+        "relationship": "derived_from",
+        "note": "Requirements derived from moderate-baseline 800-53 controls tailored for nonfederal systems."
+      },
+      {
+        "id": "32-CFR-2002",
+        "relationship": "mandated_by",
+        "note": "CUI regulation requires nonfederal systems handling CUI to meet 800-171 requirements."
+      }
+    ]
+  }
 }

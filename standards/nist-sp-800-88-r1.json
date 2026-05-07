@@ -8,5 +8,22 @@
   "publication_date": "2014-12-18",
   "url": "https://csrc.nist.gov/pubs/sp/800/88/r1/final",
   "status": "active",
-  "notes": "Provides guidance on media sanitization methods (Clear, Purge, Destroy) for different media types."
+  "tier": 6,
+  "notes": "Provides guidance on media sanitization methods (Clear, Purge, Destroy) for different media types.",
+  "authority": {
+    "derives_from": [
+      {
+        "id": "44-USC-CH35",
+        "relationship": "mandated_by",
+        "note": "FISMA directs NIST to develop security guidelines including media protection."
+      }
+    ],
+    "references": [
+      {
+        "id": "NIST-SP-800-53",
+        "section": "MP-6",
+        "note": "Provides detailed guidance for implementing the MP-6 Media Sanitization control."
+      }
+    ]
+  }
 }

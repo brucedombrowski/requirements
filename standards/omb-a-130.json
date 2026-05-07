@@ -1,0 +1,36 @@
+{
+  "id": "OMB-A-130",
+  "name": "Managing Information as a Strategic Resource",
+  "short_name": "OMB Circular A-130",
+  "type": "omb_circular",
+  "issuing_organization": "Office of Management and Budget",
+  "publication_date": "2016-07-28",
+  "url": "https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf",
+  "status": "active",
+  "tier": 3,
+  "notes": "Establishes general policy for federal information management including security, privacy, and records management. Requires agencies to implement NIST standards.",
+  "authority": {
+    "derives_from": [
+      {
+        "id": "44-USC-CH35",
+        "relationship": "authorized_by",
+        "note": "FISMA directs OMB to oversee agency information security programs."
+      },
+      {
+        "id": "5-USC-552A",
+        "relationship": "implements",
+        "note": "Implements Privacy Act requirements for federal information systems."
+      }
+    ],
+    "references": [
+      {
+        "id": "NIST-SP-800-53",
+        "note": "Directs agencies to apply NIST security controls."
+      },
+      {
+        "id": "FIPS-199",
+        "note": "Requires use of FIPS 199 for security categorization."
+      }
+    ]
+  }
+}

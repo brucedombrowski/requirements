@@ -1,0 +1,32 @@
+{
+  "id": "FIPS-200",
+  "name": "Minimum Security Requirements for Federal Information and Information Systems",
+  "short_name": "FIPS 200",
+  "type": "fips",
+  "issuing_organization": "National Institute of Standards and Technology",
+  "publication_date": "2006-03-01",
+  "url": "https://csrc.nist.gov/pubs/fips/200/final",
+  "status": "active",
+  "tier": 5,
+  "notes": "Specifies minimum security requirements for federal information systems across 17 security-related areas. Mandates use of NIST SP 800-53 controls.",
+  "authority": {
+    "derives_from": [
+      {
+        "id": "44-USC-CH35",
+        "relationship": "mandated_by",
+        "note": "FISMA directs NIST to develop mandatory security standards."
+      },
+      {
+        "id": "40-USC-11331",
+        "relationship": "mandated_by",
+        "note": "Authorizes NIST to promulgate compulsory federal information security standards."
+      }
+    ],
+    "references": [
+      {
+        "id": "FIPS-199",
+        "note": "Requires FIPS 199 categorization before selecting security controls."
+      }
+    ]
+  }
+}
