@@ -77,8 +77,13 @@ def mermaid_safe_id(node_id):
 
 
 def generate_mermaid(standards, derives_edges, ref_edges):
-    """Generate Mermaid graph markup."""
-    lines = ["graph TD"]
+    """Generate Mermaid graph markup.
+
+    Layout is bottom-to-top (graph BT) so the Constitution sits at the
+    top while authority arrows flow upward from each standard to its
+    parent — i.e. "child --(is mandated by)--> parent" reads naturally.
+    """
+    lines = ["graph BT"]
 
     # Group nodes by tier
     tiers = {}
@@ -107,7 +112,8 @@ def generate_mermaid(standards, derives_edges, ref_edges):
             lines.append(f'    {safe}["{label}"]')
         lines.append("")
 
-    # Authority edges (solid arrows)
+    # Authority edges (solid arrows): child --> parent, labelled with the
+    # child-perspective verb (e.g. "mandated by", "implements").
     if derives_edges:
         lines.append("    %% Authority (derives_from)")
         for src, tgt, meta in derives_edges:
@@ -116,9 +122,9 @@ def generate_mermaid(standards, derives_edges, ref_edges):
             src_safe = mermaid_safe_id(src)
             tgt_safe = mermaid_safe_id(tgt)
             if label:
-                lines.append(f"    {tgt_safe} -->|{label}| {src_safe}")
+                lines.append(f"    {src_safe} -->|{label}| {tgt_safe}")
             else:
-                lines.append(f"    {tgt_safe} --> {src_safe}")
+                lines.append(f"    {src_safe} --> {tgt_safe}")
         lines.append("")
 
     # Reference edges (dotted arrows)
@@ -156,7 +162,7 @@ def generate_dot(standards, derives_edges, ref_edges):
     """Generate Graphviz DOT format."""
     lines = [
         "digraph authority {",
-        '    rankdir=TB;',
+        '    rankdir=BT;',
         '    node [shape=box, style="rounded,filled", fontname="Helvetica"];',
         '    edge [fontname="Helvetica", fontsize=10];',
         "",
@@ -193,11 +199,11 @@ def generate_dot(standards, derives_edges, ref_edges):
         for std in sorted(tiers[tier_num], key=lambda s: s["id"]):
             safe = mermaid_safe_id(std["id"])
             label = std.get("short_name", std["id"])
-            lines.append(f'        {safe} [label="{label}", fillcolor="{color}"];')
+            lines.append(f'        "{safe}" [label="{label}", fillcolor="{color}"];')
         lines.append("    }")
         lines.append("")
 
-    # Authority edges
+    # Authority edges: child -> parent, with the child-perspective verb.
     lines.append("    // Authority edges")
     for src, tgt, meta in derives_edges:
         rel = meta.get("relationship", "")
@@ -205,9 +211,9 @@ def generate_dot(standards, derives_edges, ref_edges):
         tgt_safe = mermaid_safe_id(tgt)
         label = rel.replace("_", " ") if rel else ""
         if label:
-            lines.append(f'    {tgt_safe} -> {src_safe} [label="{label}"];')
+            lines.append(f'    "{src_safe}" -> "{tgt_safe}" [label="{label}"];')
         else:
-            lines.append(f"    {tgt_safe} -> {src_safe};")
+            lines.append(f'    "{src_safe}" -> "{tgt_safe}";')
 
     lines.append("")
 
@@ -218,7 +224,7 @@ def generate_dot(standards, derives_edges, ref_edges):
             src_safe = mermaid_safe_id(src)
             tgt_safe = mermaid_safe_id(tgt)
             lines.append(
-                f'    {src_safe} -> {tgt_safe} [style=dashed, color=gray, label="refs"];'
+                f'    "{src_safe}" -> "{tgt_safe}" [style=dashed, color=gray, label="refs"];'
             )
 
     lines.append("}")
@@ -289,12 +295,12 @@ def generate_tikz(standards, derives_edges, ref_edges):
             prev_tier_first = mermaid_safe_id(stds[0]["id"]).lower()
         lines.append("")
 
-    # Authority edges
+    # Authority edges: arrow from child to parent.
     lines.append("    % Authority edges")
     for src, tgt, meta in derives_edges:
         src_safe = mermaid_safe_id(src).lower()
         tgt_safe = mermaid_safe_id(tgt).lower()
-        lines.append(f"    \\draw[authority] ({tgt_safe}) -- ({src_safe});")
+        lines.append(f"    \\draw[authority] ({src_safe}) -- ({tgt_safe});")
 
     lines.append("")
 
