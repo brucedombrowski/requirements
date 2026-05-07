@@ -69,10 +69,43 @@ def text_of(elem) -> str:
     return normalize("".join(elem.itertext()))
 
 
+def is_document_paragraph(p) -> bool:
+    """Decide whether a <p> element carries document text vs NARA chrome.
+
+    NARA's transcripts mix the actual constitutional text with editorial
+    notes (`<p class="smaller">`), navigation buttons (`<a class="btn">`
+    wrapped in a <p>), and footer/sidebar paragraphs. None of those should
+    show up in our extracted text.
+    """
+    classes = (p.get("class") or "").split()
+    if "smaller" in classes:
+        return False
+    text = text_of(p)
+    if not text:
+        return False
+    children = list(p)
+    if len(children) == 1 and children[0].tag == "a":
+        a_classes = (children[0].get("class") or "").split()
+        if "btn" in a_classes:
+            return False
+    return True
+
+
 def find_main_content(doc):
-    """Find the article content container in NARA's page template."""
-    # NARA uses `<div id="content-area">...` or `<article>...`.
-    for xpath in ('//*[@id="content-area"]', '//article', '//main', '//div[@role="main"]'):
+    """Find the tightest container holding just the article content.
+
+    NARA's templates wrap many things in `<section>` blocks (sidebars,
+    footers, table-of-contents, etc.). The actual document text lives
+    inside `<section id="block-system-main">`. Targeting it first keeps
+    sidebar/footer paragraphs out of the iteration entirely.
+    """
+    for xpath in (
+        '//section[@id="block-system-main"]',
+        '//*[@id="content-area"]',
+        '//article',
+        '//main',
+        '//div[@role="main"]',
+    ):
         nodes = doc.xpath(xpath)
         if nodes:
             return nodes[0]
@@ -148,26 +181,39 @@ def extract_articles(html_path: Path):
                         continue
                     if next_h3_line and p.sourceline >= next_h3_line:
                         break
-                    t = text_of(p)
-                    if t:
-                        paras.append(t)
+                    if not is_document_paragraph(p):
+                        continue
+                    paras.append(text_of(p))
                 sections.append({"number": sec_num, "text": " ".join(paras)})
             articles.append({"number": article_num, "sections": sections})
         else:
             # NARA omits <h3 id> section markers for short articles (V, VI, VII).
-            # Treat all paragraphs between this <h2> and the next as the article body.
-            paras = []
-            for p in body.iter("p"):
-                if not p.sourceline:
+            # Article VII includes the signers list, where state-name labels
+            # are wrapped in <strong> sibling tags rather than <p>; capture
+            # those too so the signers are grouped by state.
+            chunks = []
+            for el in body.iter():
+                if el.tag not in ("p", "strong"):
                     continue
-                if p.sourceline <= a_h2.sourceline:
+                if not el.sourceline:
                     continue
-                if next_a_line and p.sourceline >= next_a_line:
+                if el.sourceline <= a_h2.sourceline:
+                    continue
+                if next_a_line and el.sourceline >= next_a_line:
                     break
-                t = text_of(p)
-                if t:
-                    paras.append(t)
-            articles.append({"number": article_num, "text": " ".join(paras)})
+                if el.tag == "p":
+                    if not is_document_paragraph(el):
+                        continue
+                    chunks.append(text_of(el))
+                elif el.tag == "strong":
+                    # Only top-level <strong> (state-name headers between signer paragraphs),
+                    # not <strong> nested inside a <p> (those are emphasis within a sentence).
+                    if el.getparent() is not None and el.getparent().tag == "p":
+                        continue
+                    t = text_of(el)
+                    if t:
+                        chunks.append(t)
+            articles.append({"number": article_num, "text": " ".join(chunks)})
 
     return preamble, articles
 
@@ -193,9 +239,9 @@ def extract_amendments_1_to_10(html_path: Path):
                 continue
             if next_line and p.sourceline >= next_line:
                 break
-            t = text_of(p)
-            if t:
-                paras.append(t)
+            if not is_document_paragraph(p):
+                continue
+            paras.append(text_of(p))
         amendments.append({
             "number": roman,
             "ratified": AMENDMENT_DATES.get(roman, ""),
@@ -251,9 +297,9 @@ def extract_amendments_11_to_27(html_path: Path):
                         continue
                     if sec_next and p.sourceline >= sec_next:
                         break
-                    t = text_of(p)
-                    if t:
-                        paras.append(t)
+                    if not is_document_paragraph(p):
+                        continue
+                    paras.append(text_of(p))
                 sections.append({"number": sec_num, "text": " ".join(paras)})
             amendments.append({
                 "number": roman,
@@ -267,9 +313,9 @@ def extract_amendments_11_to_27(html_path: Path):
                     continue
                 if next_line and p.sourceline >= next_line:
                     break
-                t = text_of(p)
-                if t:
-                    paras.append(t)
+                if not is_document_paragraph(p):
+                    continue
+                paras.append(text_of(p))
             amendments.append({
                 "number": roman,
                 "ratified": AMENDMENT_DATES.get(roman, ""),
