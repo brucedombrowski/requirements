@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Regulatory Authority Graph — Requirements Catalog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      max-width: 100%;
+      color: #1f2328;
+      background: #ffffff;
+    }
+    header {
+      max-width: 64rem;
+      margin: 0 auto 1.5rem;
+    }
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: 1.6rem;
+    }
+    p.lead {
+      margin: 0 0 0.25rem;
+      color: #57606a;
+    }
+    p.hint {
+      margin: 0.25rem 0 0;
+      color: #57606a;
+      font-size: 0.9rem;
+    }
+    a {
+      color: #0969da;
+    }
+    .graph-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border: 1px solid #d0d7de;
+      border-radius: 6px;
+      padding: 1rem;
+      background: #ffffff;
+      box-sizing: border-box;
+    }
+    object {
+      display: block;
+      width: 100%;
+      height: auto;
+      min-height: 600px;
+    }
+    footer {
+      max-width: 64rem;
+      margin: 1.5rem auto 0;
+      color: #57606a;
+      font-size: 0.85rem;
+    }
+    footer code {
+      background: #eff1f3;
+      padding: 0.1rem 0.3rem;
+      border-radius: 3px;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Regulatory Authority Graph</h1>
+    <p class="lead">
+      Combined authority web for the
+      <a href="https://github.com/brucedombrowski/requirements">requirements catalog</a> —
+      every standard, every parent it inherits authority from, every lateral reference.
+    </p>
+    <p class="hint">
+      Read bottom-up: each arrow points from a standard to its authority parent.
+      Solid arrows are authority edges; dotted arrows are lateral references.
+      <strong>Click any node to open that standard&rsquo;s canonical source.</strong>
+      Hover for the full title and local PDF path.
+    </p>
+  </header>
+
+  <div class="graph-wrap">
+    <object data="authority-graph.svg" type="image/svg+xml" aria-label="Regulatory authority graph">
+      <!-- Fallback if browser blocks object: render as image (links won't work). -->
+      <img src="authority-graph.svg" alt="Regulatory authority graph" style="width:100%; height:auto;">
+    </object>
+  </div>
+
+  <footer>
+    Regenerate with
+    <code>python tools/authority-graph.py --format dot | dot -Tsvg &gt; docs/authority-graph.svg</code>.
+    Source: <a href="https://github.com/brucedombrowski/requirements/blob/main/docs/index.html">docs/index.html</a>.
+  </footer>
+</body>
+</html>
