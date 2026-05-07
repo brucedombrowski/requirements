@@ -132,25 +132,42 @@ def extract_articles(html_path: Path):
         # Sections within this article: <h3 id="N-M">
         next_a_line = article_h2s[a_idx + 1].sourceline if a_idx + 1 < len(article_h2s) else None
         section_h3s = body.xpath(f'.//h3[starts-with(@id, "{article_num_int}-")]')
-        sections = []
-        for s_idx, s_h3 in enumerate(section_h3s):
-            sec_id = s_h3.get("id")
-            sec_num = sec_id.split("-", 1)[1]
-            # Collect <p> elements between this section and the next heading.
-            next_h3_line = section_h3s[s_idx + 1].sourceline if s_idx + 1 < len(section_h3s) else next_a_line
+
+        if section_h3s:
+            sections = []
+            for s_idx, s_h3 in enumerate(section_h3s):
+                sec_id = s_h3.get("id")
+                sec_num = sec_id.split("-", 1)[1]
+                # Collect <p> elements between this section and the next heading.
+                next_h3_line = section_h3s[s_idx + 1].sourceline if s_idx + 1 < len(section_h3s) else next_a_line
+                paras = []
+                for p in body.iter("p"):
+                    if not p.sourceline:
+                        continue
+                    if p.sourceline <= s_h3.sourceline:
+                        continue
+                    if next_h3_line and p.sourceline >= next_h3_line:
+                        break
+                    t = text_of(p)
+                    if t:
+                        paras.append(t)
+                sections.append({"number": sec_num, "text": " ".join(paras)})
+            articles.append({"number": article_num, "sections": sections})
+        else:
+            # NARA omits <h3 id> section markers for short articles (V, VI, VII).
+            # Treat all paragraphs between this <h2> and the next as the article body.
             paras = []
             for p in body.iter("p"):
                 if not p.sourceline:
                     continue
-                if p.sourceline <= s_h3.sourceline:
+                if p.sourceline <= a_h2.sourceline:
                     continue
-                if next_h3_line and p.sourceline >= next_h3_line:
+                if next_a_line and p.sourceline >= next_a_line:
                     break
                 t = text_of(p)
                 if t:
                     paras.append(t)
-            sections.append({"number": sec_num, "text": " ".join(paras)})
-        articles.append({"number": article_num, "sections": sections})
+            articles.append({"number": article_num, "text": " ".join(paras)})
 
     return preamble, articles
 
