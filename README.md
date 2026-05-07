@@ -59,6 +59,56 @@ python tools/validate.py --sources
 All source documents are US government works, public domain under 17 USC
 § 105.
 
+## Use as a Local-LLM Knowledge Base
+
+This repository doubles as a curated corpus for an **air-gapped,
+local-LLM compliance assistant** — the kind you'd run inside an
+IP-sensitive environment (defense, aerospace, regulated industries)
+where queries can't leave the network.
+
+What's already corpus-ready:
+
+- **Authoritative source documents** in `sources/`, byte-verifiable
+  via SHA-256 — a model grounded in these can never drift to a
+  changed-upstream version without `validate.py --sources` catching
+  it.
+- **Pre-chunked structured representations** alongside the PDFs — see
+  `catalog/nasa/npr-2810-7/document-programmatic.json` (paragraph-
+  level), `controls/**/catalog.json` (control-level, derived from
+  NIST OSCAL), and `registries/nara-cui/registry.json` (entry-level).
+  These are natural retrieval units; no manual chunking needed.
+- **Authority graph** (`standards/*/authority`) — gives a model
+  ancestor/descendant relationships, so it can answer "what
+  authorizes this?" by graph-walking, not just keyword similarity.
+- **Per-document metadata** (tier, type, issuing organization, status)
+  — high-quality filters for retrieval-augmented generation.
+
+What you'd add to turn this into a working assistant:
+
+1. **Embedding pipeline** — push each chunk through a local embedder
+   (e.g., `nomic-embed-text` on Ollama) into a vector store
+   (sqlite-vss, Chroma, LanceDB).
+2. **Retrieval glue** — query → top-K chunks with their `standards/`
+   metadata as citations.
+3. **Local LLM** — Llama 3.1 / Mistral / similar via Ollama or
+   llama.cpp.
+4. **Chunking for the remaining unstructured PDFs** — `sources/` PDFs
+   that don't yet have a `document-programmatic.json` companion need
+   one. Same pattern as `tools/oscal-to-catalog.py` and (planned)
+   `tools/uslm-to-document.py`: an authoritative upstream is the
+   source of truth, and a deterministic transformer emits a clean
+   prose-structured JSON for retrieval.
+
+**Why authoritative XML (USLM, OSCAL) but JSON for retrieval?** The
+official structured formats are great as the source of truth — they
+carry semantic tags, stable IDs, and government provenance. But for
+direct LLM retrieval, XML is awkward: tag soup inflates token counts
+~6×, modern tokenizers don't have efficient tokens for `<` / `</`,
+and LLMs see vastly more prose during pretraining. Keeping XML/OSCAL
+as the authoritative source and deterministically deriving prose-
+structured JSON gives you both: provenance to the byte, plus clean
+chunks the model can actually use.
+
 ## How Projects Consume This Catalog
 
 Projects add this repo as a **git submodule** and create a `project-selection.json`:
