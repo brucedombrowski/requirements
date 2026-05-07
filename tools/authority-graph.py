@@ -199,7 +199,17 @@ def generate_dot(standards, derives_edges, ref_edges):
         for std in sorted(tiers[tier_num], key=lambda s: s["id"]):
             safe = mermaid_safe_id(std["id"])
             label = std.get("short_name", std["id"])
-            lines.append(f'        "{safe}" [label="{label}", fillcolor="{color}"];')
+            url = std.get("url", "").replace('"', '\\"')
+            local = std.get("local_copy")
+            tooltip = std.get("name", label)
+            if local:
+                tooltip = f"{tooltip} (local: {local})"
+            tooltip = tooltip.replace('"', '\\"')
+            attrs = [f'label="{label}"', f'fillcolor="{color}"', f'tooltip="{tooltip}"']
+            if url:
+                attrs.append(f'URL="{url}"')
+                attrs.append('target="_blank"')
+            lines.append(f'        "{safe}" [{", ".join(attrs)}];')
         lines.append("    }")
         lines.append("")
 

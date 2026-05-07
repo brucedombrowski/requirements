@@ -42,14 +42,20 @@
 <!-- USC_CONST -->
 <g id="node1" class="node">
 <title>USC_CONST</title>
+<g id="a_node1"><a xlink:href="https://www.archives.gov/founding-docs/constitution" xlink:title="Constitution of the United States (local: sources/federal/us&#45;constitution.pdf)" target="_blank">
 <path fill="#d4edda" stroke="black" d="M585.62,-882.5C585.62,-882.5 492.38,-882.5 492.38,-882.5 486.38,-882.5 480.38,-876.5 480.38,-870.5 480.38,-870.5 480.38,-858.5 480.38,-858.5 480.38,-852.5 486.38,-846.5 492.38,-846.5 492.38,-846.5 585.62,-846.5 585.62,-846.5 591.62,-846.5 597.62,-852.5 597.62,-858.5 597.62,-858.5 597.62,-870.5 597.62,-870.5 597.62,-876.5 591.62,-882.5 585.62,-882.5"/>
 <text xml:space="preserve" text-anchor="middle" x="539" y="-858.7" font-family="Helvetica,sans-Serif" font-size="14.00">U.S. Constitution</text>
+</a>
+</g>
 </g>
 <!-- 40_USC_11331 -->
 <g id="node2" class="node">
 <title>40_USC_11331</title>
+<g id="a_node2"><a xlink:href="https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title40-section11331&amp;num=0&amp;edition=prelim" xlink:title="Responsibilities for Federal Information Systems Standards — 40 U.S.C. §11331 (local: sources/federal/40&#45;usc&#45;11331.pdf)" target="_blank">
 <path fill="#cce5ff" stroke="black" d="M291.62,-752.25C291.62,-752.25 192.38,-752.25 192.38,-752.25 186.38,-752.25 180.38,-746.25 180.38,-740.25 180.38,-740.25 180.38,-728.25 180.38,-728.25 180.38,-722.25 186.38,-716.25 192.38,-716.25 192.38,-716.25 291.62,-716.25 291.62,-716.25 297.62,-716.25 303.62,-722.25 303.62,-728.25 303.62,-728.25 303.62,-740.25 303.62,-740.25 303.62,-746.25 297.62,-752.25 291.62,-752.25"/>
 <text xml:space="preserve" text-anchor="middle" x="242" y="-728.45" font-family="Helvetica,sans-Serif" font-size="14.00">40 U.S.C. §11331</text>
+</a>
+</g>
 </g>
 <!-- 40_USC_11331&#45;&gt;USC_CONST -->
 <g id="edge2" class="edge">
@@ -61,8 +67,11 @@
 <!-- 44_USC_CH35 -->
 <g id="node3" class="node">
 <title>44_USC_CH35</title>
+<g id="a_node3"><a xlink:href="https://uscode.house.gov/view.xhtml?path=/prelim@title44/chapter35&amp;edition=prelim" xlink:title="Federal Information Security Modernization Act (FISMA) — 44 U.S.C. Chapter 35 (local: sources/federal/44&#45;usc&#45;ch35.pdf)" target="_blank">
 <path fill="#cce5ff" stroke="black" d="M689.38,-752.25C689.38,-752.25 540.62,-752.25 540.62,-752.25 534.62,-752.25 528.62,-746.25 528.62,-740.25 528.62,-740.25 528.62,-728.25 528.62,-728.25 528.62,-722.25 534.62,-716.25 540.62,-716.25 540.62,-716.25 689.38,-716.25 689.38,-716.25 695.38,-716.25 701.38,-722.25 701.38,-728.25 701.38,-728.25 701.38,-740.25 701.38,-740.25 701.38,-746.25 695.38,-752.25 689.38,-752.25"/>
 <text xml:space="preserve" text-anchor="middle" x="615" y="-728.45" font-family="Helvetica,sans-Serif" font-size="14.00">44 U.S.C. Ch. 35 (FISMA)</text>
+</a>
+</g>
 </g>
 <!-- 44_USC_CH35&#45;&gt;USC_CONST -->
 <g id="edge3" class="edge">
@@ -74,8 +83,11 @@
 <!-- 5_USC_552 -->
 <g id="node4" class="node">
 <title>5_USC_552</title>
+<g id="a_node4"><a xlink:href="https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552&amp;num=0&amp;edition=prelim" xlink:title="Freedom of Information Act (FOIA) — 5 U.S.C. §552 (local: sources/federal/5&#45;usc&#45;552.pdf)" target="_blank">
 <path fill="#cce5ff" stroke="black" d="M149.88,-752.25C149.88,-752.25 28.12,-752.25 28.12,-752.25 22.13,-752.25 16.12,-746.25 16.12,-740.25 16.12,-740.25 16.12,-728.25 16.12,-728.25 16.12,-722.25 22.12,-716.25 28.12,-716.25 28.12,-716.25 149.88,-716.25 149.88,-716.25 155.88,-716.25 161.88,-722.25 161.88,-728.25 161.88,-728.25 161.88,-740.25 161.88,-740.25 161.88,-746.25 155.88,-752.25 149.88,-752.25"/>
 <text xml:space="preserve" text-anchor="middle" x="89" y="-728.45" font-family="Helvetica,sans-Serif" font-size="14.00">5 U.S.C. §552 (FOIA)</text>
+</a>
+</g>
 </g>
 <!-- 5_USC_552&#45;&gt;USC_CONST -->
 <g id="edge4" class="edge">
@@ -87,8 +99,11 @@
 <!-- 5_USC_552A -->
 <g id="node5" class="node">
 <title>5_USC_552A</title>
+<g id="a_node5"><a xlink:href="https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title5-section552a&amp;num=0&amp;edition=prelim" xlink:title="Privacy Act of 1974 — 5 U.S.C. §552a (local: sources/federal/5&#45;usc&#45;552a.pdf)" target="_blank">
 <path fill="#cce5ff" stroke="black" d="M498.25,-752.25C498.25,-752.25 333.75,-752.25 333.75,-752.25 327.75,-752.25 321.75,-746.25 321.75,-740.25 321.75,-740.25 321.75,-728.25 321.75,-728.25 321.75,-722.25 327.75,-716.25 333.75,-716.25 333.75,-716.25 498.25,-716.25 498.25,-716.25 504.25,-716.25 510.25,-722.25 510.25,-728.25 510.25,-728.25 510.25,-740.25 510.25,-740.25 510.25,-746.25 504.25,-752.25 498.25,-752.25"/>
 <text xml:space="preserve" text-anchor="middle" x="416" y="-728.45" font-family="Helvetica,sans-Serif" font-size="14.00">5 U.S.C. §552a (Privacy Act)</text>
+</a>
+</g>
 </g>
 <!-- 5_USC_552A&#45;&gt;USC_CONST -->
 <g id="edge5" class="edge">
@@ -100,8 +115,11 @@
 <!-- 51_USC_20132 -->
 <g id="node6" class="node">
 <title>51_USC_20132</title>
+<g id="a_node6"><a xlink:href="https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title51-section20132&amp;num=0&amp;edition=prelim" xlink:title="National Aeronautics and Space Act — Sec. 20132. Security requirements (local: sources/federal/51&#45;usc&#45;20132.pdf)" target="_blank">
 <path fill="#cce5ff" stroke="black" d="M830.62,-752.25C830.62,-752.25 731.38,-752.25 731.38,-752.25 725.38,-752.25 719.38,-746.25 719.38,-740.25 719.38,-740.25 719.38,-728.25 719.38,-728.25 719.38,-722.25 725.38,-716.25 731.38,-716.25 731.38,-716.25 830.62,-716.25 830.62,-716.25 836.62,-716.25 842.62,-722.25 842.62,-728.25 842.62,-728.25 842.62,-740.25 842.62,-740.25 842.62,-746.25 836.62,-752.25 830.62,-752.25"/>
 <text xml:space="preserve" text-anchor="middle" x="781" y="-728.45" font-family="Helvetica,sans-Serif" font-size="14.00">51 U.S.C. §20132</text>
+</a>
+</g>
 </g>
 <!-- 51_USC_20132&#45;&gt;USC_CONST -->
 <g id="edge6" class="edge">
@@ -113,8 +131,11 @@
 <!-- EO_13556 -->
 <g id="node7" class="node">
 <title>EO_13556</title>
+<g id="a_node7"><a xlink:href="https://www.archives.gov/cui/registry/policy-guidance" xlink:title="Establishing the Controlled Unclassified Information Program (local: sources/federal/eo&#45;13556.pdf)" target="_blank">
 <path fill="#fff3cd" stroke="black" d="M1191.75,-622C1191.75,-622 1138.25,-622 1138.25,-622 1132.25,-622 1126.25,-616 1126.25,-610 1126.25,-610 1126.25,-598 1126.25,-598 1126.25,-592 1132.25,-586 1138.25,-586 1138.25,-586 1191.75,-586 1191.75,-586 1197.75,-586 1203.75,-592 1203.75,-598 1203.75,-598 1203.75,-610 1203.75,-610 1203.75,-616 1197.75,-622 1191.75,-622"/>
 <text xml:space="preserve" text-anchor="middle" x="1165" y="-598.2" font-family="Helvetica,sans-Serif" font-size="14.00">EO 13556</text>
+</a>
+</g>
 </g>
 <!-- EO_13556&#45;&gt;USC_CONST -->
 <g id="edge7" class="edge">
@@ -126,8 +147,11 @@
 <!-- OMB_A_130 -->
 <g id="node8" class="node">
 <title>OMB_A_130</title>
+<g id="a_node8"><a xlink:href="https://www.whitehouse.gov/wp-content/uploads/legacy_drupal_files/omb/circulars/A130/a130revised.pdf" xlink:title="Managing Information as a Strategic Resource (local: sources/federal/omb&#45;circular&#45;a&#45;130.pdf)" target="_blank">
 <path fill="#fce4ec" stroke="black" d="M1813.12,-491.75C1813.12,-491.75 1698.88,-491.75 1698.88,-491.75 1692.88,-491.75 1686.88,-485.75 1686.88,-479.75 1686.88,-479.75 1686.88,-467.75 1686.88,-467.75 1686.88,-461.75 1692.88,-455.75 1698.88,-455.75 1698.88,-455.75 1813.12,-455.75 1813.12,-455.75 1819.12,-455.75 1825.12,-461.75 1825.12,-467.75 1825.12,-467.75 1825.12,-479.75 1825.12,-479.75 1825.12,-485.75 1819.12,-491.75 1813.12,-491.75"/>
 <text xml:space="preserve" text-anchor="middle" x="1756" y="-467.95" font-family="Helvetica,sans-Serif" font-size="14.00">OMB Circular A&#45;130</text>
+</a>
+</g>
 </g>
 <!-- OMB_A_130&#45;&gt;44_USC_CH35 -->
 <g id="edge33" class="edge">
@@ -146,8 +170,11 @@
 <!-- FIPS_199 -->
 <g id="node11" class="node">
 <title>FIPS_199</title>
+<g id="a_node11"><a xlink:href="https://csrc.nist.gov/pubs/fips/199/final" xlink:title="Standards for Security Categorization of Federal Information and Information Systems (local: sources/nist/NIST.FIPS.199.pdf)" target="_blank">
 <path fill="#d1ecf1" stroke="black" d="M568.12,-622C568.12,-622 519.88,-622 519.88,-622 513.88,-622 507.88,-616 507.88,-610 507.88,-610 507.88,-598 507.88,-598 507.88,-592 513.88,-586 519.88,-586 519.88,-586 568.12,-586 568.12,-586 574.12,-586 580.12,-592 580.12,-598 580.12,-598 580.12,-610 580.12,-610 580.12,-616 574.12,-622 568.12,-622"/>
 <text xml:space="preserve" text-anchor="middle" x="544" y="-598.2" font-family="Helvetica,sans-Serif" font-size="14.00">FIPS 199</text>
+</a>
+</g>
 </g>
 <!-- OMB_A_130&#45;&gt;FIPS_199 -->
 <g id="edge54" class="edge">
@@ -159,8 +186,11 @@
 <!-- NIST_SP_800_53 -->
 <g id="node17" class="node">
 <title>NIST_SP_800_53</title>
+<g id="a_node17"><a xlink:href="https://csrc.nist.gov/pubs/sp/800/53/r5/upd1/final" xlink:title="Security and Privacy Controls for Information Systems and Organizations (local: sources/nist/NIST.SP.800&#45;53r5.pdf)" target="_blank">
 <path fill="#e8daef" stroke="black" d="M1433.62,-491.75C1433.62,-491.75 1304.38,-491.75 1304.38,-491.75 1298.38,-491.75 1292.38,-485.75 1292.38,-479.75 1292.38,-479.75 1292.38,-467.75 1292.38,-467.75 1292.38,-461.75 1298.38,-455.75 1304.38,-455.75 1304.38,-455.75 1433.62,-455.75 1433.62,-455.75 1439.62,-455.75 1445.62,-461.75 1445.62,-467.75 1445.62,-467.75 1445.62,-479.75 1445.62,-479.75 1445.62,-485.75 1439.62,-491.75 1433.62,-491.75"/>
 <text xml:space="preserve" text-anchor="middle" x="1369" y="-467.95" font-family="Helvetica,sans-Serif" font-size="14.00">NIST SP 800&#45;53 Rev 5</text>
+</a>
+</g>
 </g>
 <!-- OMB_A_130&#45;&gt;NIST_SP_800_53 -->
 <g id="edge53" class="edge">
@@ -172,8 +202,11 @@
 <!-- 32_CFR_2002 -->
 <g id="node9" class="node">
 <title>32_CFR_2002</title>
+<g id="a_node9"><a xlink:href="https://www.ecfr.gov/current/title-32/subtitle-B/chapter-XX/part-2002" xlink:title="Controlled Unclassified Information (local: sources/federal/32&#45;cfr&#45;2002.pdf)" target="_blank">
 <path fill="#e2e3e5" stroke="black" d="M748.38,-491.75C748.38,-491.75 647.62,-491.75 647.62,-491.75 641.62,-491.75 635.62,-485.75 635.62,-479.75 635.62,-479.75 635.62,-467.75 635.62,-467.75 635.62,-461.75 641.62,-455.75 647.62,-455.75 647.62,-455.75 748.38,-455.75 748.38,-455.75 754.38,-455.75 760.38,-461.75 760.38,-467.75 760.38,-467.75 760.38,-479.75 760.38,-479.75 760.38,-485.75 754.38,-491.75 748.38,-491.75"/>
 <text xml:space="preserve" text-anchor="middle" x="698" y="-467.95" font-family="Helvetica,sans-Serif" font-size="14.00">32 CFR Part 2002</text>
+</a>
+</g>
 </g>
 <!-- 32_CFR_2002&#45;&gt;EO_13556 -->
 <g id="edge1" class="edge">
@@ -199,8 +232,11 @@
 <!-- NIST_SP_800_88 -->
 <g id="node18" class="node">
 <title>NIST_SP_800_88</title>
+<g id="a_node18"><a xlink:href="https://csrc.nist.gov/pubs/sp/800/88/r1/final" xlink:title="Guidelines for Media Sanitization (local: sources/nist/NIST.SP.800&#45;88r1.pdf)" target="_blank">
 <path fill="#e8daef" stroke="black" d="M1650.62,-361.5C1650.62,-361.5 1521.38,-361.5 1521.38,-361.5 1515.38,-361.5 1509.38,-355.5 1509.38,-349.5 1509.38,-349.5 1509.38,-337.5 1509.38,-337.5 1509.38,-331.5 1515.38,-325.5 1521.38,-325.5 1521.38,-325.5 1650.62,-325.5 1650.62,-325.5 1656.62,-325.5 1662.62,-331.5 1662.62,-337.5 1662.62,-337.5 1662.62,-349.5 1662.62,-349.5 1662.62,-355.5 1656.62,-361.5 1650.62,-361.5"/>
 <text xml:space="preserve" text-anchor="middle" x="1586" y="-337.7" font-family="Helvetica,sans-Serif" font-size="14.00">NIST SP 800&#45;88 Rev 1</text>
+</a>
+</g>
 </g>
 <!-- 32_CFR_2002&#45;&gt;NIST_SP_800_88 -->
 <g id="edge36" class="edge">
@@ -212,8 +248,11 @@
 <!-- FIPS_140_2 -->
 <g id="node10" class="node">
 <title>FIPS_140_2</title>
+<g id="a_node10"><a xlink:href="https://csrc.nist.gov/pubs/fips/140-2/final" xlink:title="Security Requirements for Cryptographic Modules (local: sources/nist/NIST.FIPS.140&#45;2.pdf)" target="_blank">
 <path fill="#d1ecf1" stroke="black" d="M478.12,-491.75C478.12,-491.75 417.88,-491.75 417.88,-491.75 411.88,-491.75 405.88,-485.75 405.88,-479.75 405.88,-479.75 405.88,-467.75 405.88,-467.75 405.88,-461.75 411.88,-455.75 417.88,-455.75 417.88,-455.75 478.12,-455.75 478.12,-455.75 484.12,-455.75 490.12,-461.75 490.12,-467.75 490.12,-467.75 490.12,-479.75 490.12,-479.75 490.12,-485.75 484.12,-491.75 478.12,-491.75"/>
 <text xml:space="preserve" text-anchor="middle" x="448" y="-467.95" font-family="Helvetica,sans-Serif" font-size="14.00">FIPS 140&#45;2</text>
+</a>
+</g>
 </g>
 <!-- FIPS_140_2&#45;&gt;40_USC_11331 -->
 <g id="edge9" class="edge">
@@ -246,8 +285,11 @@
 <!-- FIPS_200 -->
 <g id="node12" class="node">
 <title>FIPS_200</title>
+<g id="a_node12"><a xlink:href="https://csrc.nist.gov/pubs/fips/200/final" xlink:title="Minimum Security Requirements for Federal Information and Information Systems (local: sources/nist/NIST.FIPS.200.pdf)" target="_blank">
 <path fill="#d1ecf1" stroke="black" d="M568.12,-491.75C568.12,-491.75 519.88,-491.75 519.88,-491.75 513.88,-491.75 507.88,-485.75 507.88,-479.75 507.88,-479.75 507.88,-467.75 507.88,-467.75 507.88,-461.75 513.88,-455.75 519.88,-455.75 519.88,-455.75 568.12,-455.75 568.12,-455.75 574.12,-455.75 580.12,-461.75 580.12,-467.75 580.12,-467.75 580.12,-479.75 580.12,-479.75 580.12,-485.75 574.12,-491.75 568.12,-491.75"/>
 <text xml:space="preserve" text-anchor="middle" x="544" y="-467.95" font-family="Helvetica,sans-Serif" font-size="14.00">FIPS 200</text>
+</a>
+</g>
 </g>
 <!-- FIPS_200&#45;&gt;40_USC_11331 -->
 <g id="edge13" class="edge">
@@ -273,8 +315,11 @@
 <!-- NARA_CUI_MARKING_HBK -->
 <g id="node13" class="node">
 <title>NARA_CUI_MARKING_HBK</title>
+<g id="a_node13"><a xlink:href="https://www.archives.gov/cui/registry/marking-handbook" xlink:title="CUI Marking Handbook (local: sources/nara/cui&#45;marking&#45;handbook.pdf)" target="_blank">
 <path fill="#e8daef" stroke="black" d="M970.12,-361.5C970.12,-361.5 795.88,-361.5 795.88,-361.5 789.88,-361.5 783.88,-355.5 783.88,-349.5 783.88,-349.5 783.88,-337.5 783.88,-337.5 783.88,-331.5 789.88,-325.5 795.88,-325.5 795.88,-325.5 970.12,-325.5 970.12,-325.5 976.12,-325.5 982.12,-331.5 982.12,-337.5 982.12,-337.5 982.12,-349.5 982.12,-349.5 982.12,-355.5 976.12,-361.5 970.12,-361.5"/>
 <text xml:space="preserve" text-anchor="middle" x="883" y="-337.7" font-family="Helvetica,sans-Serif" font-size="14.00">NARA CUI Marking Handbook</text>
+</a>
+</g>
 </g>
 <!-- NARA_CUI_MARKING_HBK&#45;&gt;EO_13556 -->
 <g id="edge15" class="edge">
@@ -293,8 +338,11 @@
 <!-- NARA_CUI_Registry -->
 <g id="node14" class="node">
 <title>NARA_CUI_Registry</title>
+<g id="a_node14"><a xlink:href="https://www.archives.gov/cui" xlink:title="National Archives CUI Registry" target="_blank">
 <path fill="#e8daef" stroke="black" d="M1121.88,-361.5C1121.88,-361.5 1012.12,-361.5 1012.12,-361.5 1006.12,-361.5 1000.12,-355.5 1000.12,-349.5 1000.12,-349.5 1000.12,-337.5 1000.12,-337.5 1000.12,-331.5 1006.12,-325.5 1012.12,-325.5 1012.12,-325.5 1121.88,-325.5 1121.88,-325.5 1127.88,-325.5 1133.88,-331.5 1133.88,-337.5 1133.88,-337.5 1133.88,-349.5 1133.88,-349.5 1133.88,-355.5 1127.88,-361.5 1121.88,-361.5"/>
 <text xml:space="preserve" text-anchor="middle" x="1067" y="-337.7" font-family="Helvetica,sans-Serif" font-size="14.00">NARA CUI Registry</text>
+</a>
+</g>
 </g>
 <!-- NARA_CUI_Registry&#45;&gt;EO_13556 -->
 <g id="edge17" class="edge">
@@ -313,8 +361,11 @@
 <!-- NIST_SP_800_171 -->
 <g id="node15" class="node">
 <title>NIST_SP_800_171</title>
+<g id="a_node15"><a xlink:href="https://csrc.nist.gov/pubs/sp/800/171/r2/final" xlink:title="Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations (local: sources/nist/NIST.SP.800&#45;171r2.pdf)" target="_blank">
 <path fill="#e8daef" stroke="black" d="M1479.38,-361.5C1479.38,-361.5 1342.62,-361.5 1342.62,-361.5 1336.62,-361.5 1330.62,-355.5 1330.62,-349.5 1330.62,-349.5 1330.62,-337.5 1330.62,-337.5 1330.62,-331.5 1336.62,-325.5 1342.62,-325.5 1342.62,-325.5 1479.38,-325.5 1479.38,-325.5 1485.38,-325.5 1491.38,-331.5 1491.38,-337.5 1491.38,-337.5 1491.38,-349.5 1491.38,-349.5 1491.38,-355.5 1485.38,-361.5 1479.38,-361.5"/>
 <text xml:space="preserve" text-anchor="middle" x="1411" y="-337.7" font-family="Helvetica,sans-Serif" font-size="14.00">NIST SP 800&#45;171 Rev 2</text>
+</a>
+</g>
 </g>
 <!-- NIST_SP_800_171&#45;&gt;32_CFR_2002 -->
 <g id="edge20" class="edge">
@@ -333,8 +384,11 @@
 <!-- NIST_SP_800_171_R3 -->
 <g id="node16" class="node">
 <title>NIST_SP_800_171_R3</title>
+<g id="a_node16"><a xlink:href="https://csrc.nist.gov/pubs/sp/800/171/r3/final" xlink:title="Protecting Controlled Unclassified Information in Nonfederal Systems and Organizations (local: sources/nist/NIST.SP.800&#45;171r3.pdf)" target="_blank">
 <path fill="#e8daef" stroke="black" d="M1300.38,-361.5C1300.38,-361.5 1163.62,-361.5 1163.62,-361.5 1157.62,-361.5 1151.62,-355.5 1151.62,-349.5 1151.62,-349.5 1151.62,-337.5 1151.62,-337.5 1151.62,-331.5 1157.62,-325.5 1163.62,-325.5 1163.62,-325.5 1300.38,-325.5 1300.38,-325.5 1306.38,-325.5 1312.38,-331.5 1312.38,-337.5 1312.38,-337.5 1312.38,-349.5 1312.38,-349.5 1312.38,-355.5 1306.38,-361.5 1300.38,-361.5"/>
 <text xml:space="preserve" text-anchor="middle" x="1232" y="-337.7" font-family="Helvetica,sans-Serif" font-size="14.00">NIST SP 800&#45;171 Rev 3</text>
+</a>
+</g>
 </g>
 <!-- NIST_SP_800_171_R3&#45;&gt;32_CFR_2002 -->
 <g id="edge22" class="edge">
@@ -388,8 +442,11 @@
 <!-- NPD_2810_1F -->
 <g id="node19" class="node">
 <title>NPD_2810_1F</title>
+<g id="a_node19"><a xlink:href="https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PD_2810_001F_&amp;page_name=main" xlink:title="NASA Information Security Policy (local: sources/nasa/npd&#45;2810&#45;1f.pdf)" target="_blank">
 <path fill="#fdebd0" stroke="black" d="M1871.88,-361.5C1871.88,-361.5 1798.12,-361.5 1798.12,-361.5 1792.12,-361.5 1786.12,-355.5 1786.12,-349.5 1786.12,-349.5 1786.12,-337.5 1786.12,-337.5 1786.12,-331.5 1792.12,-325.5 1798.12,-325.5 1798.12,-325.5 1871.88,-325.5 1871.88,-325.5 1877.88,-325.5 1883.88,-331.5 1883.88,-337.5 1883.88,-337.5 1883.88,-349.5 1883.88,-349.5 1883.88,-355.5 1877.88,-361.5 1871.88,-361.5"/>
 <text xml:space="preserve" text-anchor="middle" x="1835" y="-337.7" font-family="Helvetica,sans-Serif" font-size="14.00">NPD 2810.1F</text>
+</a>
+</g>
 </g>
 <!-- NPD_2810_1F&#45;&gt;44_USC_CH35 -->
 <g id="edge27" class="edge">
@@ -422,8 +479,11 @@
 <!-- NPR_2810_7 -->
 <g id="node20" class="node">
 <title>NPR_2810_7</title>
+<g id="a_node20"><a xlink:href="https://nodis3.gsfc.nasa.gov/displayDir.cfm?Internal_ID=N_PR_2810_0007_&amp;page_name=main" xlink:title="Controlled Unclassified Information (local: sources/nasa/npr&#45;2810&#45;7.pdf)" target="_blank">
 <path fill="#fadbd8" stroke="black" d="M915.75,-231.25C915.75,-231.25 850.25,-231.25 850.25,-231.25 844.25,-231.25 838.25,-225.25 838.25,-219.25 838.25,-219.25 838.25,-207.25 838.25,-207.25 838.25,-201.25 844.25,-195.25 850.25,-195.25 850.25,-195.25 915.75,-195.25 915.75,-195.25 921.75,-195.25 927.75,-201.25 927.75,-207.25 927.75,-207.25 927.75,-219.25 927.75,-219.25 927.75,-225.25 921.75,-231.25 915.75,-231.25"/>
 <text xml:space="preserve" text-anchor="middle" x="883" y="-207.45" font-family="Helvetica,sans-Serif" font-size="14.00">NPR 2810.7</text>
+</a>
+</g>
 </g>
 <!-- NPR_2810_7&#45;&gt;44_USC_CH35 -->
 <g id="edge32" class="edge">
@@ -526,8 +586,11 @@
 <!-- ITS_HBK_CUI -->
 <g id="node21" class="node">
 <title>ITS_HBK_CUI</title>
+<g id="a_node21"><a xlink:href="https://nodis3.gsfc.nasa.gov/OPD_Docs/ITS-HBK-2810.09-02_.pdf" xlink:title="NASA CUI Handbook" target="_blank">
 <path fill="#f5f5dc" stroke="black" d="M806,-101C806,-101 688,-101 688,-101 682,-101 676,-95 676,-89 676,-89 676,-77 676,-77 676,-71 682,-65 688,-65 688,-65 806,-65 806,-65 812,-65 818,-71 818,-77 818,-77 818,-89 818,-89 818,-95 812,-101 806,-101"/>
 <text xml:space="preserve" text-anchor="middle" x="747" y="-77.2" font-family="Helvetica,sans-Serif" font-size="14.00">ITS&#45;HBK&#45;2810.09&#45;02</text>
+</a>
+</g>
 </g>
 <!-- ITS_HBK_CUI&#45;&gt;NARA_CUI_MARKING_HBK -->
 <g id="edge39" class="edge">
