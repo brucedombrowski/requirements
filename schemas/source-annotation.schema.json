@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/brucedombrowski/requirements/schemas/source-annotation.schema.json",
+  "title": "Source Document Annotation",
+  "description": "Annotations attached to a source document in sources/. Captures known errata, stale cross-references, supersession, and other facts about the document's relationship to current law that aren't visible from the document itself. Annotation files live next to the document they describe, named <document>.notes.json.",
+  "type": "object",
+  "required": ["annotates", "annotated_sha256", "annotation_date", "annotations"],
+  "properties": {
+    "annotates": {
+      "type": "string",
+      "description": "Repo-relative path to the source document this file annotates."
+    },
+    "annotated_sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "SHA-256 of the source document at the time the annotations were written. If the source's hash changes, these annotations need to be revalidated."
+    },
+    "annotation_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the annotations were last reviewed."
+    },
+    "annotations": {
+      "type": "array",
+      "description": "List of individual annotations.",
+      "items": {
+        "type": "object",
+        "required": ["type", "description"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "stale_cross_reference",
+              "errata",
+              "supersession",
+              "ambiguity",
+              "interpretation_note"
+            ],
+            "description": "Category of annotation."
+          },
+          "occurs_in": {
+            "type": "string",
+            "description": "Where in the source document this annotation applies (section, page, count of occurrences, etc.)."
+          },
+          "description": {
+            "type": "string",
+            "description": "Human-readable description of the issue."
+          },
+          "as_published_text": {
+            "type": "string",
+            "description": "Exact text or citation as it appears in the source document."
+          },
+          "current_location": {
+            "type": "string",
+            "description": "Where the substantively-equivalent text or authority lives today, if applicable."
+          },
+          "resolved_by": {
+            "type": "string",
+            "description": "Public Law, regulation, or other action that effected the change."
+          },
+          "verified_date": {
+            "type": "string",
+            "format": "date",
+            "description": "Date this annotation's claim was independently verified against the current authoritative source."
+          },
+          "verified_by_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "URL of the verification source consulted."
+          },
+          "note": {
+            "type": "string",
+            "description": "Additional commentary or context."
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

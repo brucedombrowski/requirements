@@ -41,6 +41,9 @@ SCHEMA_MAP = {
     "schemas/cui-registry.schema.json": [
         "registries/nara-cui/registry.json",
     ],
+    "schemas/source-annotation.schema.json": [
+        "sources/**/*.notes.json",
+    ],
 }
 
 

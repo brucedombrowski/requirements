@@ -59,14 +59,46 @@ only defense.
   Since DoD CMMC 2.0 and most existing federal contracts still
   anchor on Rev 2, the Rev 2 catalog has to be hand-extracted,
   with that scope caveat documented inline.
-- **Other people's JSON has silent omissions.** A widely-referenced
-  GitHub Constitution-as-JSON repository is missing Article VII
-  entirely. Hand-curated data tends to lose pieces without anyone
-  noticing.
+- **Other people's JSON has silent omissions.** A GitHub
+  Constitution-as-JSON repository is missing Article VII entirely.
+  (Caveat: 2-star, last commit 2018, low actual usage — but the
+  point stands: hand-curated data tends to lose pieces without
+  anyone noticing.)
+- **Foundational standards get less machine-readable support than
+  their downstream consumers.** FIPS 199 — the security-categorization
+  standard *every other federal infosec document depends on* — has
+  no supplemental material on NIST CSRC: no OSCAL, no CSV, no
+  template, no errata, no Rev 1. Its downstream consumer NIST SP
+  800-53 Rev 5 ships a full OSCAL stack. The result: every
+  compliance vendor rolls their own FIPS 199 representation, all
+  subtly different.
+- **Published federal standards contain stale citations they've
+  never republished to fix.** FIPS 199 (Feb 2004, never revised)
+  cites "44 U.S.C. § 3542" twelve times for the CIA-triad and
+  national-security-system definitions. § 3542 was repealed in
+  2014 by FISMA Modernization (P.L. 113-283); the substantive text
+  moved to § 3552(b)(3) and § 3552(b)(6). NIST has not republished.
+  The standard is still operative.
 
 **Implication.** Mechanical extraction from a fixed authoritative
 source, repeated by anyone with the same input, beats trusting a
-"clean" pre-published JSON.
+"clean" pre-published JSON. And source-document annotations
+(stored next to the source under `<doc>.notes.json`, conforming to
+`schemas/source-annotation.schema.json`) are how known
+discrepancies get carried forward without re-discovering them
+every time.
+
+### Verify before claiming, every time
+
+The same author of this catalog (a previous me) sent a polite
+email to OLRC reporting a stale cross-reference in 40 U.S.C.
+§ 11331 — without first fetching the live page to check what it
+currently says. The page had already been amended; the cross-
+reference was correct; the email was wrong; a follow-up retraction
+went out the same evening. The lesson: every external-facing
+claim about specific document text must be backed by a fresh fetch
+of the actual source, *not* a prior belief about what the document
+"obviously" says.
 
 ## Extraction methodology
 

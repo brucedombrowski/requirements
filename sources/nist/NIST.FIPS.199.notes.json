@@ -1,0 +1,28 @@
+{
+  "annotates": "sources/nist/NIST.FIPS.199.pdf",
+  "annotated_sha256": "73d19f05f71e30f378050f178aa3943c38790bbae56c07f2b5708c5a1a90242f",
+  "annotation_date": "2026-05-07",
+  "annotations": [
+    {
+      "type": "stale_cross_reference",
+      "occurs_in": "Section 3 (Security Objectives, p. 1–2); Appendix A (Terms and Definitions); Section 5 of the foreword. Twelve total occurrences in the document.",
+      "description": "FIPS 199 cites \"44 U.S.C. § 3542\" for the statutory definition of \"information security\" and its constituent Confidentiality, Integrity, and Availability sub-definitions. 44 U.S.C. § 3542 was repealed by the Federal Information Security Modernization Act of 2014 (Pub. L. No. 113–283, § 2(a), 128 Stat. 3073). The substantive definitions, with text nearly identical to what FIPS 199 quotes, are now codified at 44 U.S.C. § 3552(b)(3). NIST has not republished FIPS 199 with updated citations.",
+      "as_published_text": "[44 U.S.C., Sec. 3542] (and variants \"44 U.S.C., SEC. 3542\", \"44 United States Code Section 3542\")",
+      "current_location": "44 U.S.C. § 3552(b)(3) — \"information security\" definition with (A) integrity, (B) confidentiality, (C) availability sub-clauses; substantive text matches FIPS 199's quotations.",
+      "resolved_by": "Federal Information Security Modernization Act of 2014, Pub. L. No. 113–283.",
+      "verified_date": "2026-05-07",
+      "verified_by_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title44-section3552&num=0&edition=prelim",
+      "note": "FIPS 199 was published February 2004 and remains the operative federal standard for security categorization. The repealed-section citations are a known artifact of NIST's practice of leaving FIPS publications frozen rather than reissuing for cross-reference cleanup. Inquiries about this publication: sec-cert@nist.gov (per CSRC publication page planning note dated 2023-03-17)."
+    },
+    {
+      "type": "stale_cross_reference",
+      "occurs_in": "Section 2 (Applicability), p. 1: \"national security systems as defined in 44 United States Code Section 3542(b)(2)\".",
+      "description": "FIPS 199 cites 44 U.S.C. § 3542(b)(2) for the definition of \"national security system.\" That definition is now codified at 44 U.S.C. § 3552(b)(6) following the same FISMA Modernization Act repeal-and-recodification.",
+      "as_published_text": "44 United States Code Section 3542(b)(2)",
+      "current_location": "44 U.S.C. § 3552(b)(6).",
+      "resolved_by": "Federal Information Security Modernization Act of 2014, Pub. L. No. 113–283.",
+      "verified_date": "2026-05-07",
+      "verified_by_url": "https://uscode.house.gov/view.xhtml?req=granuleid:USC-prelim-title44-section3552&num=0&edition=prelim"
+    }
+  ]
+}
