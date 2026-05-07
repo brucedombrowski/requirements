@@ -24,6 +24,18 @@
         "relationship": "mandated_by",
         "note": "Authorizes NIST to promulgate compulsory federal information security standards."
       }
+    ],
+    "references": [
+      {
+        "id": "OMB-A-130",
+        "section": "Appendix B [3]",
+        "note": "FIPS 199 Appendix B cites OMB Circular A-130, Transmittal Memorandum #4, November 2000 (the version operative at FIPS 199's 2004 publication; OMB A-130 was substantially revised in 2016)."
+      },
+      {
+        "id": "5-USC-552A",
+        "section": "Appendix B [1]",
+        "note": "FIPS 199 Appendix B cites the Privacy Act of 1974 (Public Law 93-579), codified at 5 U.S.C. § 552a."
+      }
     ]
   }
 }

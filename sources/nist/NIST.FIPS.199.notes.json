@@ -51,6 +51,18 @@
       "occurs_in": "Section 2 (Applicability), p. 1.",
       "description": "Section 2 establishes negative scope: FIPS 199 applies to federal information / systems EXCEPT those that are classified national-security or designated NSS. Determining applicability for a given system therefore requires traversing four other documents: (a) FIPS 199's own Appendix A definition of \"federal information system\" [40 U.S.C. § 11331]; (b) Executive Order 13526 for classification status (FIPS 199 cites the revoked EO 12958/13292); (c) the Atomic Energy Act of 1954 for Restricted Data; and (d) 44 U.S.C. § 3552(b)(6) for the National Security System definition (FIPS 199 cites the repealed § 3542(b)(2)). The applicability determination is multi-step and depends on documents NIST has not updated FIPS 199 to reference accurately.",
       "note": "The CMMC ecosystem exists in part because Section 2's \"or by a contractor of an executive agency\" clause was operationally underspecified; CMMC 2.0 is essentially an industry-specific applicability framework on top of FIPS 199 / 800-171."
+    },
+    {
+      "type": "interpretation_note",
+      "occurs_in": "Section 3 (Categorization of Information and Information Systems), pp. 1–4 — the operative content of the standard.",
+      "description": "Compressed reading of FIPS 199's substantive content: Table 1 (the impact-level criteria) + two rules. Rule 1: an information type's security category is the ordered triple SC = {(confidentiality, impact), (integrity, impact), (availability, impact)}, where impact ∈ {LOW, MODERATE, HIGH, NA} (NA only valid for confidentiality). Rule 2 — the high-water-mark rule: an information system's category is the maximum impact across each axis from all information types resident on the system; no axis may be NA at system level (floor is LOW). Everything else in the 12-page PDF — Sections 1–2, the worked examples, the appendices — is scaffolding around this. About 30 words of operative logic in a document that prints to 12 pages.",
+      "note": "Practical implication: the substantive logic is small enough to fully encode in tooling. Combined with NIST SP 800-60's information-type catalog, an LLM grounded in this corpus can produce a defensible FIPS 199 categorization in seconds, with citations to Table 1's amplification language for each judgment."
+    },
+    {
+      "type": "ambiguity",
+      "occurs_in": "Section 3 (Categorization of Information and Information Systems), Table 1 / impact-level definitions, pp. 1–2.",
+      "description": "The impact-level criteria (\"limited\" / \"serious\" / \"severe or catastrophic\" adverse effect) are deliberately fuzzy — the standard intentionally leaves the categorization judgment to agency context. This means two agencies can categorize substantively identical information types differently (one Moderate, one High) without either being \"wrong\" under FIPS 199. Defensibility under audit depends on documenting the reasoning, not the outcome.",
+      "note": "Partial mitigation: NIST SP 800-60 Volume 2 provides recommended categorizations for specific information types (contract information, law enforcement data, etc.). They are advisory but agencies use them as the default and document any deviation. The squishiness is therefore a feature for cross-agency flexibility but a structural source of inconsistency in audit trails."
     }
   ]
 }
