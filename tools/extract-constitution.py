@@ -74,8 +74,9 @@ def is_document_paragraph(p) -> bool:
 
     NARA's transcripts mix the actual constitutional text with editorial
     notes (`<p class="smaller">`), navigation buttons (`<a class="btn">`
-    wrapped in a <p>), and footer/sidebar paragraphs. None of those should
-    show up in our extracted text.
+    wrapped in a <p>), cross-references to other NARA pages
+    (`<a href="/founding-docs/...">`), and footer/sidebar paragraphs.
+    None of those should show up in our extracted text.
     """
     classes = (p.get("class") or "").split()
     if "smaller" in classes:
@@ -87,6 +88,20 @@ def is_document_paragraph(p) -> bool:
     if len(children) == 1 and children[0].tag == "a":
         a_classes = (children[0].get("class") or "").split()
         if "btn" in a_classes:
+            return False
+    # NARA editorial cross-references mix prose with a /founding-docs/ link
+    # (e.g. "For biographies of the non-signing delegates ... see the Founding
+    # Fathers page."). The signers list also links to /founding-docs/ — but
+    # only as link text, with no surrounding prose. Distinguish by checking
+    # whether the <p> has meaningful plain text *outside* the links.
+    has_founding_link = any(
+        (a.get("href") or "").startswith("/founding-docs/") for a in p.iter("a")
+    )
+    if has_founding_link:
+        plain = (p.text or "")
+        for child in p:
+            plain += child.tail or ""
+        if re.sub(r"[\s.,;]", "", plain):
             return False
     return True
 
