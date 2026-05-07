@@ -20,7 +20,20 @@
     },
     "type": {
       "type": "string",
-      "enum": ["standard", "regulation", "executive_order", "registry", "federal_regulation"],
+      "enum": [
+        "standard",
+        "regulation",
+        "executive_order",
+        "registry",
+        "federal_regulation",
+        "constitutional_provision",
+        "statute",
+        "omb_circular",
+        "fips",
+        "agency_policy",
+        "agency_procedure",
+        "handbook"
+      ],
       "description": "Classification of the standard."
     },
     "issuing_organization": {
@@ -41,6 +54,20 @@
       "format": "uri",
       "description": "Canonical URL."
     },
+    "local_copy": {
+      "type": "string",
+      "description": "Repo-relative path to a local copy of the source document (e.g., sources/nasa/npr-2810-7.pdf). Optional — captured for clean-room provenance."
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$",
+      "description": "SHA-256 hex digest of local_copy. Allows verifying that a downloaded source matches the version this catalog was decomposed from."
+    },
+    "date_accessed": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the local_copy was downloaded from url. Important for sources that may change without versioning."
+    },
     "supersedes": {
       "type": "string",
       "description": "ID of the standard this one supersedes."
@@ -53,6 +80,70 @@
     "notes": {
       "type": "string",
       "description": "Additional context."
+    },
+    "tier": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9,
+      "description": "Hierarchy level for authority graph layout. 0=Constitution, 1=Statute, 2=Executive Order, 3=OMB Policy, 4=Federal Regulation, 5=FIPS, 6=NIST SP/NARA, 7=Agency Policy, 8=Agency Procedure, 9=Handbook."
+    },
+    "authority": {
+      "type": "object",
+      "description": "Authority relationships to other standards in the graph.",
+      "properties": {
+        "derives_from": {
+          "type": "array",
+          "description": "Vertical authority chain — where this standard gets its legal authority.",
+          "items": {
+            "type": "object",
+            "required": ["id"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "ID of the parent authority standard."
+              },
+              "relationship": {
+                "type": "string",
+                "enum": ["implements", "authorized_by", "mandated_by", "derived_from"],
+                "description": "Nature of the authority relationship."
+              },
+              "section": {
+                "type": "string",
+                "description": "Specific section of the parent standard."
+              },
+              "note": {
+                "type": "string",
+                "description": "Explanatory note about this relationship."
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "references": {
+          "type": "array",
+          "description": "Lateral cross-references — related but not authority-granting.",
+          "items": {
+            "type": "object",
+            "required": ["id"],
+            "properties": {
+              "id": {
+                "type": "string",
+                "description": "ID of the referenced standard."
+              },
+              "section": {
+                "type": "string",
+                "description": "Specific section referenced."
+              },
+              "note": {
+                "type": "string",
+                "description": "Explanatory note about this reference."
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
     }
   },
   "additionalProperties": false

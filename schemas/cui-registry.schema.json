@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/brucedombrowski/requirements/schemas/cui-registry.schema.json",
+  "title": "CUI Registry",
+  "description": "Schema for the NARA CUI Registry — categories, markings, and organizational index groupings.",
+  "type": "object",
+  "required": ["registry_info", "organizational_index_groupings"],
+  "properties": {
+    "registry_info": {
+      "type": "object",
+      "required": ["title", "publisher", "authority", "url", "sources"],
+      "properties": {
+        "title": { "type": "string" },
+        "publisher": { "type": "string" },
+        "authority": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "url": { "type": "string", "format": "uri" },
+        "description": { "type": "string" },
+        "cui_types": {
+          "type": "object",
+          "properties": {
+            "basic": { "type": "string" },
+            "specified": { "type": "string" }
+          }
+        },
+        "sources": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "required": ["title", "url", "last_reviewed", "date_accessed", "citation_mla"],
+            "properties": {
+              "title": { "type": "string" },
+              "url": { "type": "string", "format": "uri" },
+              "last_reviewed": { "type": "string", "format": "date" },
+              "date_accessed": { "type": "string", "format": "date" },
+              "citation_mla": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "organizational_index_groupings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["name", "categories"],
+        "properties": {
+          "name": { "type": "string" },
+          "notes": { "type": "string" },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["name"],
+              "properties": {
+                "name": { "type": "string" },
+                "marking": { "type": ["string", "null"] },
+                "banner_specified": { "type": ["string", "null"] },
+                "banner_basic": { "type": ["string", "null"] },
+                "detail_url": { "type": "string", "format": "uri" },
+                "notes": { "type": "string" },
+                "description": { "type": "string" },
+                "authorities": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": ["citation", "type"],
+                    "properties": {
+                      "citation": { "type": "string" },
+                      "type": { "enum": ["basic", "specified"] },
+                      "sanctions": { "type": ["string", "null"] }
+                    }
+                  }
+                },
+                "last_reviewed": { "type": "string", "format": "date" },
+                "originally_published": { "type": "string", "format": "date" }
+              }
+            }
+          }
+        }
+      }
+    },
+    "limited_dissemination_controls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["control", "description"],
+        "properties": {
+          "control": { "type": "string" },
+          "description": { "type": "string" }
+        }
+      }
+    }
+  }
+}
