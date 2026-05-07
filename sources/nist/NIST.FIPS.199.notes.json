@@ -45,6 +45,12 @@
       "occurs_in": "Section 1 (Purpose), p. 1, paragraph 1: cites FISMA 2002.",
       "description": "FIPS 199's references to FISMA-as-Title-III-of-P.L.-107-347 are P.L. citations and not technically stale (Public Law numbers are permanent historical identifiers). However, the substantive FISMA framework cited in Section 1 was repealed and replaced by the Federal Information Security Modernization Act of 2014 (Pub. L. No. 113-283). Readers tracing operative law should follow the 2014 successor codified at 44 U.S.C. §§ 3551-3558. The CIA and national-security-system definitions FIPS 199 inherits from FISMA 2002 are now at § 3552(b)(3) and § 3552(b)(6) (see other annotations).",
       "note": "Distinct issue from the § 3542 stale-cross-reference annotations: the P.L. citation here is fine as written; the supersession is informational for readers navigating to current authority."
+    },
+    {
+      "type": "interpretation_note",
+      "occurs_in": "Section 2 (Applicability), p. 1.",
+      "description": "Section 2 establishes negative scope: FIPS 199 applies to federal information / systems EXCEPT those that are classified national-security or designated NSS. Determining applicability for a given system therefore requires traversing four other documents: (a) FIPS 199's own Appendix A definition of \"federal information system\" [40 U.S.C. § 11331]; (b) Executive Order 13526 for classification status (FIPS 199 cites the revoked EO 12958/13292); (c) the Atomic Energy Act of 1954 for Restricted Data; and (d) 44 U.S.C. § 3552(b)(6) for the National Security System definition (FIPS 199 cites the repealed § 3542(b)(2)). The applicability determination is multi-step and depends on documents NIST has not updated FIPS 199 to reference accurately.",
+      "note": "The CMMC ecosystem exists in part because Section 2's \"or by a contractor of an executive agency\" clause was operationally underspecified; CMMC 2.0 is essentially an industry-specific applicability framework on top of FIPS 199 / 800-171."
     }
   ]
 }

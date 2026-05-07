@@ -11,7 +11,7 @@
   "date_accessed": "2026-05-07",
   "status": "active",
   "tier": 5,
-  "notes": "Defines security categories (Low, Moderate, High) based on confidentiality, integrity, and availability impact levels.",
+  "notes": "Defines security categories (Low, Moderate, High) based on confidentiality, integrity, and availability impact levels. Mandatory federal standard: FIPS publications are issued by NIST, approved by the Secretary of Commerce under 40 U.S.C. § 11331 (originally ITMRA § 5131, P.L. 104-106), and binding on federal agencies. This distinguishes FIPS from NIST Special Publications (SP), which are sometimes mandatory and sometimes guidelines depending on individual statutory backing.",
   "authority": {
     "derives_from": [
       {
